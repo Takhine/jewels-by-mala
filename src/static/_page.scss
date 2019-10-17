@@ -1,0 +1,70 @@
+$trans_time: 0.5s;
+$side_menu_color: #16110e;
+$page_bg_color: #ffffff;
+$page_font_color: #000000;
+$side_nav_desk_width: 50px;
+$gold_color: #8d7249;
+
+@mixin page-transitions {
+  position: absolute;
+  -moz-transition: top $trans_time, right $trans_time, bottom $trans_time, left $trans_time;
+  -webkit-transition: top $trans_time, right $trans_time, bottom $trans_time, left $trans_time;
+  transition: top $trans_time, right$trans_time, bottom $trans_time, left $trans_time;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+* {
+  margin: 0px;
+  overflow: hidden;
+}
+
+.page-overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $page_bg_color;
+  color: $page_font_color;
+  overflow: visible;
+  text-align: center;
+  width: calc(100% - side_nav_desk_width);
+  @include page-transitions;
+}
+
+.side-nav {
+  background-color: $side_menu_color;
+  color: white;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -50px;
+  width: $side_nav_desk_width;
+  @include page-transitions;
+
+  .icon-container {
+    padding: 5px;
+  }
+}
+
+.page-overlay.left {
+  left: 100%;
+}
+
+#side-menu-icon {
+  margin-top: 5px;
+  background: url("./assets/burger.svg") no-repeat top;
+  background-size: contain;
+  height: 20px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.slide-in-page {
+  left: 50px !important;
+}
+
+.slide-in-side-nav {
+  left: 0 !important;
+}
