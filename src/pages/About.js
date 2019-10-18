@@ -14,6 +14,5 @@ export default function About() {
                 </div>
             </div>
         </React.Fragment>
-        
     ); 
 }
