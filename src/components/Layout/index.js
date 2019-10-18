@@ -9,7 +9,7 @@ function Layout(props) {
     const [stateIn, setStateIn] = React.useState(true);
 
     React.useEffect(() => {
-        console.log(props.history.location)
+        console.log(props.history)
 
         if(props.history.location.pathname === '/'){
             setStateIn(true); 
