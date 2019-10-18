@@ -9,14 +9,14 @@ function Layout(props) {
     const [stateIn, setStateIn] = React.useState(true);
 
     React.useEffect(() => {
-        console.log(props.history.location.pathname)
+        console.log(props.history.location)
 
         if(props.history.location.pathname === '/'){
             setStateIn(true); 
         }else{
             setStateIn(false); 
         }
-    })
+    }, [props.history.location.key])
     
     const openNav = () => {
         setStateIn(true); 
@@ -38,7 +38,9 @@ function Layout(props) {
             <div id="div1" className={stateIn ? 'open' : 'close' }>
                 <h1 onClick={() => closeNav('about')}>About</h1>
                 <h1 onClick={() => closeNav('contact')}>Contact</h1>
-                
+
+
+                <button  onClick={() => openNav()}>X</button>
             </div>
 
             <div id="div2">
