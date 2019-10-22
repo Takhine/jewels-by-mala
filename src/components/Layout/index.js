@@ -37,7 +37,7 @@ function Layout(props) {
                 position: 'relative'
             }}
         >
-            
+            {/** NAVIGATION */}
             <div id="div1" className={stateIn ? 'open' : 'close' }>
                 <h1 onClick={() => closeNav('about')}>About</h1>
                 <h1 onClick={() => closeNav('contact')}>Contact</h1>
@@ -50,7 +50,9 @@ function Layout(props) {
                 }
 
             </div>
+            
 
+            {/** MAIN PAGE CONTENT */}
             <div id="div2">
                 <img src="https://www.cindychao.com/back/data/uploads/2017/04/artist-background.jpg" width='100%' />
                 {props.children}
