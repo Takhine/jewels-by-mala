@@ -8,9 +8,25 @@ function Layout(props) {
 
     const [stateIn, setStateIn] = React.useState(true);
 
-    const toggleState = () => {
-        setStateIn(!stateIn);
+    React.useEffect(() => {
+        console.log(props.history)
+
+        if(props.history.location.pathname === '/'){
+            setStateIn(true); 
+        }else{
+            setStateIn(false); 
+        }
+    }, [props.history.location.key])
+    
+    const openNav = () => {
+        setStateIn(true); 
     }
+
+    const closeNav = (page) => {
+        setStateIn(false); 
+        props.history.push(`/${page}`)
+    }
+
     return (
         
         <div 
@@ -20,7 +36,11 @@ function Layout(props) {
         >
             {/** NAVIGATION */}
             <div id="div1" className={stateIn ? 'open' : 'close' }>
-                <h1 onClick={() => toggleState()}>Hello</h1>
+                <h1 onClick={() => closeNav('about')}>About</h1>
+                <h1 onClick={() => closeNav('contact')}>Contact</h1>
+
+
+                <button  onClick={() => openNav()}>X</button>
             </div>
             
 
