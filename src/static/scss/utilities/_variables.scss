@@ -1,0 +1,38 @@
+// Main Font-family
+
+
+// Font Weights
+$light-font:200;
+$regular-font:400;
+$bold-font:600;
+// Base Font
+$base-font-weight: $regular-font;
+$base-font-size:16px;
+$base-line-height:1.4;
+// Font Sizes
+$xxlarge-font:54px;
+$xlarge-font:30px;
+$large-font: 25px;
+$title-font:18px;
+$regular-font:16px;
+$small-font: 14px;
+$xsmall-font: 10px;
+
+
+
+// Headings
+$header-font-weight:$bold-font;
+$subheader-font-weight:$regular-font;
+
+// Border Radius
+$card-border-radius:2px;
+$tag-border-radius:8px;
+$button-border-radius:4px;
+
+// Box Shadows
+$main-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+// Gutters
+$card-gutter: 16px;
+
+// Transition time
+$transition-main:0.4s;

@@ -2,11 +2,13 @@ import React from 'react';
 
 import {withRouter} from 'react-router-dom'; 
 
-import 'static/about.scss'; 
+import 'static/scss/main.scss'; 
 
 function Layout(props) {
 
     const [stateIn, setStateIn] = React.useState(true);
+    const [sidebarName, setSidebar] = React.useState('');
+
 
     React.useEffect(() => {
         console.log(props.history)
@@ -24,6 +26,7 @@ function Layout(props) {
 
     const closeNav = (page) => {
         setStateIn(false); 
+        setSidebar(page); 
         props.history.push(`/${page}`)
     }
 
@@ -41,6 +44,11 @@ function Layout(props) {
 
 
                 <button  onClick={() => openNav()}>X</button>
+                {!stateIn &&
+                <p>{sidebarName}</p>
+
+                }
+
             </div>
 
             <div id="div2">
