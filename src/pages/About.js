@@ -6,7 +6,7 @@ export default function About() {
         <React.Fragment>
             <div className="jbm-about">
                 <div className="jbm-banner"></div>
-                <div className="jbm-banner-title">
+                <div className="container">
                     <h1>
                         Mala Cindy is an artist
                         who has learned among masters ...
