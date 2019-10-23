@@ -5,9 +5,19 @@ import {
     List,
     ListItem
 } from '@material-ui/core'
+
 import 'static/scss/main.scss';
+
+// Images
 import mainBackground from '../../static/images/backgrounds/main-background.png';
+import mainTitle from '../../static/images/main-title.png';
 import mainLogo from '../../static/images/main-logo.png';
+import pinterest from '../../static/images/icons/pinterest-icon-main.png';
+import facebook from '../../static/images/icons/facebook-icon-main.png';
+import instagram from '../../static/images/icons/instagram-icon-main.png';
+import twitter from '../../static/images/icons/twitter-icon-main.png';
+
+
 
 function Layout(props) {
 
@@ -41,6 +51,9 @@ function Layout(props) {
             {/* Navigation Panel */}
             <div id="navigation-menu">
 
+                <div className="main-title">
+                    <img src={mainTitle} alt="Jewels By Mala"/>
+                </div>
                 <div className="menu-items">
                     <List>
                         <ListItem><img src={mainLogo}className="logo-container" alt="Jewels by Mala"/></ListItem>
@@ -49,11 +62,20 @@ function Layout(props) {
                         <ListItem onClick={() => closeNav('collection')}>Collections</ListItem>
                         <ListItem onClick={() => closeNav('testimonials')}>Testimonials</ListItem>
                         <ListItem onClick={() => closeNav('contact')}>Contact</ListItem>
+                        <ListItem>
+                            <div className="social-container">
+                                <img src={pinterest} alt="Pinterest"/>
+                                <img src={facebook} alt="Facebook"/>
+                                <img src={instagram} alt="Instagram"/>
+                                <img src={twitter} alt="Twitter"/>
+
+                            </div>
+                        </ListItem>
                     </List>
-
-
                 </div>
-
+                <div className="main-copyright">
+                    <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created by Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
+                </div>
                 <img id="background" src={mainBackground} width='100%' />
             </div>
             {/* Sidebar */}

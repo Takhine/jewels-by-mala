@@ -14,17 +14,74 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
+      align-items: center;
+      @include xl{
+        align-items: unset;
+      }
+      .main-title{
+        position: absolute;
+        z-index: 1;
+        top: 40px;
+        @include xl{
+          left: 10%;
+          top: unset;
+        }
+        @include rwd(1200,1400){
+          left: 40px;
+        }
+        @media (orientation:landscape) and (max-height:500px) and (max-width:840px) {
+          left: 40px;
+          top: unset;
+        }
+        img{
+          @include rwd(768,1200){
+            width: 600px;
+            }
+          @include rwd(320,599){
+            width: 300px;
+          }
+          
+          @include rwd(600,767){
+            width: 500px;
+          }
+          
+          @include xl{
+            width: 478px;
+          }
+          @media (orientation:landscape) and (max-height:500px) and (max-width:840px) {
+           width: 200px;
+          }
+         
+        }
+        
+        
+      }
       .menu-items{
         text-align: center;
         position: absolute;
         z-index: 2;
         @include xl{
           right: 15%;
-          bottom: 30%;
+        
+        }
+        @media (orientation:landscape) and (max-height:500px) and (max-width:840px) {
+         right: 15%;
+         font-size: x-small;
+        }
+        .MuiListItem-root{
+          justify-content: center;
+
+          @include xl{
+            justify-content: flex-start;
+          }
         }
         .logo-container{
           margin-bottom: 20px;
+        }
+        .social-container{
+          width: 70px;
+          display: flex;
+          justify-content: space-between;
         }
       }
       #background{
@@ -33,8 +90,29 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
+        opacity: 0.6;
         @include msm{
           transform: translate3d(-80px, 60px, 0px)
+        }
+        @include xl{
+          opacity: 1;
+        }
+      }
+      .main-copyright{
+        position: absolute;
+        bottom: 5px;
+        text-align: center;
+        font-size: 12px;
+        width: 100%;
+        word-spacing: 2px;
+        z-index: 1  ;
+        @include xl{
+          left: 10%;
+          font-size: 14px;
+          width: auto;
+        }
+        @include rwd(1200,1400){
+          left: 40px;
         }
       }
     }
