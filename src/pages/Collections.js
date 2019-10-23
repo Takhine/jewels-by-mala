@@ -1,9 +1,10 @@
 import React from 'react'; 
 
-export default function Collection() {
+ const Collections=()=> {
     return (
-        <React.Fragment>
-            <h1>Collection</h1>
-        </React.Fragment>
+        <div className="container">
+            <h1>Collections</h1>
+        </div>
     ); 
 }
+export default Collections;

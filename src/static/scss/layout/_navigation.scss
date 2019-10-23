@@ -3,79 +3,89 @@
 }
 .main-container{
   overflow: hidden;
-}
-#navigation-menu {
-background-color: black;
-  color: white; 
-  overflow: hidden;
-  position:absolute;
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @include msm{
-    display: block;
-  }
-  .menu-items{
-    text-align: center;
-    top: 10%;
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
-}
-#background{
-  height: auto;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  top: 40%;
-  @include msm{
-    top: 0;
-  }
+  #navigation-menu {
+    background-color: black;
+      color: white; 
+      overflow: hidden;
+      position:absolute;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include msm{
+        display: block;
+      }
+      .menu-items{
+        text-align: center;
+        top: 10%;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+      #background{
+        height: auto;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        top: 40%;
+        @include msm{
+          top: 0;
+        }
+      }
+    }
+    #sidebar{
+      background-color: $primary-black;
+      width: 100vw;
+      height: 70px;
+      top: 0;
+      position: fixed;
+      transition: all .8s ease;
+      -webkit-transition: all .8s ease; 
+      z-index: 1;
+      @include xl{
+        width: 70px;
+        height: 100vh;
+      }
+    }
+    #current-page {
+      position: relative;
+      color: $primary-black; 
+      height: 100vh;  
+      z-index: 1000; 
+      width: 100%;
+      transition: all .6s ease-in;
+      -webkit-transition: all .6s ease-in; 
+      background-color: white;
+      margin-top: 70px;
+      margin-left: 0;
+      @include xl{
+        margin-top: 0;
+        margin-left: 70px;
+      }
+    }       
 }
 
-#sidebar{
-  background-color: $primary-black;
-  width: 100vw;
-  height: 70px;
-  top: 0;
-  position: fixed;
-  transition: all .5s;
-  -webkit-transition: all .5s; 
-  z-index: 1;
+
+
+
+       
+
+.pageClose {
+  transform: translateY(0%);
+}
+
+.pageOpen {
+  transform: translateY(200%);
+
   @include xl{
-    width: 70px;
-    height: 100vh;
-  }
-}
-#current-page {
-  color: $primary-black; 
-  height: 100vh;  
-  z-index: 1000; 
-  width: 100%;
-  transition: all .5s;
-  -webkit-transition: all .5s; 
-  background-color: white;
-  overflow-y: scroll;
-}              
-
-.close {
-  transform: translateY(0px);
-
-}
-
-.open {
-  transform: translateY(200vw);
-
-  @include xl{
-    transform: translateX(200vw);
+    transform: translateX(100vw);
   }
 }
 
-.closed {
+.sidebarClose {
   transform: translateY(0px);
   @include xl{
   transform: translateX(0px);
@@ -83,7 +93,7 @@ background-color: black;
   }
 }
 
-.opened {
+.sidebarOpen {
   transform: translateY(-70px);
   @include xl{
   transform: translateX(-70px);

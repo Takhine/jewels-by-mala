@@ -1,7 +1,10 @@
 import React from 'react';
 
 import { withRouter } from 'react-router-dom';
-
+import {
+    List,
+    ListItem
+} from '@material-ui/core'
 import 'static/scss/main.scss';
 import mainBackground from '../../static/images/backgrounds/main-background.png';
 function Layout(props) {
@@ -35,23 +38,30 @@ function Layout(props) {
         <div className="main-container">
             {/* Navigation Panel */}
             <div id="navigation-menu">
+
                 <div className="menu-items">
-                    <h1 onClick={() => closeNav('about')}>About</h1>
-                    <h1 onClick={() => closeNav('contact')}>Contact</h1>
+                    <List button>
+                        <ListItem onClick={() => closeNav('about')}>About</ListItem>
+                        <ListItem onClick={() => closeNav('artist')}>Artist</ListItem>
+                        <ListItem onClick={() => closeNav('collections')}>Collections</ListItem>
+                        <ListItem onClick={() => closeNav('testimonials')}>Testimonials</ListItem>
+                        <ListItem onClick={() => closeNav('contact')}>Contact</ListItem>
+                    </List>
+
+
                 </div>
 
                 <img id="background" src={mainBackground} width='100%' />
             </div>
             {/* Sidebar */}
-            <div id="sidebar" className={stateIn ? 'opened' : 'closed'}>
+            <div id="sidebar" className={stateIn ? 'sidebarOpen' : 'sidebarClosed'}>
                 <button onClick={() => openNav()}>X</button>
                 <p>{sidebarName}</p>
             </div>
 
 
             {/** MAIN PAGE CONTENT */}
-            <div id="current-page" className={stateIn ? 'open' : 'close'}>
-                <img src="https://www.cindychao.com/back/data/uploads/2017/04/artist-background.jpg" width='100%' />
+            <div id="current-page" className={stateIn ? 'pageOpen' : 'pageClose'}>
 
                 {props.children}
             </div>
