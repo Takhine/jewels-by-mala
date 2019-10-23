@@ -1,0 +1,48 @@
+.artist{
+    @include xl{
+        padding-bottom: 0;
+    }
+    .artist-banner{
+        .banner{
+            vertical-align: bottom;
+        }
+    }
+    .artist-content{
+        .quote-container{
+            display: flex;
+            justify-content: center;
+            background-color: $secondary-black;
+            color: $primary-white;
+            padding: 60px 0 40px;
+            font-size: 12px;
+            @include rwd (300, 370){
+                font-size: 10px;
+            }
+            @include msm{
+                font-size: $regular-font;
+            }
+            @include mmd{
+                font-size: larger;
+            }
+            .quote{
+                &:first-child{
+                    text-align: center;
+                }
+                & h2:last-child{
+                    font-style: italic;
+                }
+            }
+        }
+        .artist-text{
+            padding: 0;
+        }
+        .promise-container{
+            @extend .quote-container;
+            background-color: $primary-brown;       
+            .promise{
+                text-align: center;
+                margin: 0 15%;
+            }
+        }
+    }
+}

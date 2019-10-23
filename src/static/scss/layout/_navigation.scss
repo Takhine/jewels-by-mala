@@ -6,55 +6,53 @@
   height: 100vh;
   #navigation-menu {
     background-color: black;
-      color: white; 
-      overflow: hidden;
-      position:absolute;
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    color: white; 
+    overflow: hidden;
+    position:absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include xl{
+      align-items: unset;
+    }
+    .main-title{
+      position: absolute;
+      z-index: 1;
+      top: 40px;
       @include xl{
-        align-items: unset;
+        left: 10%;
+        top: unset;
       }
-      .main-title{
-        position: absolute;
-        z-index: 1;
-        top: 40px;
-        @include xl{
-          left: 10%;
-          top: unset;
+      @include rwd(1200,1400){
+        left: 40px;
+      }
+      @media (orientation:landscape) and (max-height:500px) and (max-width:840px) {
+        left: 40px;
+        top: unset;
+      }
+      img{
+        @include rwd(768,1200){
+          width: 600px;
+          }
+        @include rwd(320,599){
+          width: 300px;
         }
-        @include rwd(1200,1400){
-          left: 40px;
+          
+        @include rwd(600,767){
+          width: 500px;
+        }
+          
+        @include xl{
+          width: 478px;
         }
         @media (orientation:landscape) and (max-height:500px) and (max-width:840px) {
-          left: 40px;
-          top: unset;
+          width: 200px;
         }
-        img{
-          @include rwd(768,1200){
-            width: 600px;
-            }
-          @include rwd(320,599){
-            width: 300px;
-          }
-          
-          @include rwd(600,767){
-            width: 500px;
-          }
-          
-          @include xl{
-            width: 478px;
-          }
-          @media (orientation:landscape) and (max-height:500px) and (max-width:840px) {
-           width: 200px;
-          }
          
         }
-        
-        
       }
       .menu-items{
         text-align: center;
@@ -127,7 +125,7 @@
       position: fixed;
       transition: all .8s ease;
       -webkit-transition: all .8s ease; 
-      z-index: 1;
+      z-index: 1001;
       @include xl{
         width: 70px;
         height: 100vh;
@@ -157,9 +155,9 @@
       background-color: white;
       margin-top: 70px;
       margin-left: 0;
+      overflow: auto;
       @include xl{
         margin-top: 0;
-        margin-left: 70px;
       }
     }       
 }

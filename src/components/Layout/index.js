@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core'
 
 import 'static/scss/main.scss';
-
+import Footer from './Footer';
 // Images
 import mainBackground from '../../static/images/backgrounds/main-background.png';
 import mainTitle from '../../static/images/main-title.png';
@@ -23,6 +23,8 @@ import twitter from '../../static/images/icons/twitter-icon-main.png';
 function Layout(props) {
 
     const [stateIn, setStateIn] = React.useState(true);
+    const [stateFooter, setFooterIn] = React.useState(true);
+
     const [sidebarName, setSidebar] = React.useState('');
 
 
@@ -33,6 +35,20 @@ function Layout(props) {
             setStateIn(true);
         } else {
             setStateIn(false);
+        }
+        switch(props.history.location.pathname){
+            case '/artist':
+                setFooterIn(true);
+                break;
+            case '/collection':
+                setFooterIn(true);
+                break;
+            case '/diamonds':
+                setFooterIn(true);
+                break;
+            default:
+                setFooterIn(false);
+                break;
         }
     }, [props.history.location.key])
 
@@ -90,6 +106,10 @@ function Layout(props) {
             <div id="current-page" className={stateIn ? 'pageOpen' : 'pageClose'}>
 
                 {props.children}
+                {/* Footer */}
+                {stateFooter &&
+                <Footer />
+                }
             </div>
         </div>
     )

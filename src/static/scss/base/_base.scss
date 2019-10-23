@@ -12,3 +12,16 @@
 .justify{
     text-align: justify;
 }
+.text-right{
+    text-align: right;
+    padding-right: 70px;
+}
+.text-left{
+    text-align: left;
+}
+
+
+// Gutters
+.MuiGrid-spacing-xs-2.MuiGrid-root{
+    width: 100%;
+}

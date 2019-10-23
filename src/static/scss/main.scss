@@ -6,9 +6,13 @@
 
 @import './layout/page';
 @import './layout/navigation';
+@import './layout/footer';
+
 
 @import './base/base';
 
-@import './pages/about.scss';
+@import './pages/about';
+@import './pages/artist';
+
 
 

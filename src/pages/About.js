@@ -5,12 +5,11 @@ import artist from '../static/images/backgrounds/artist-image.png';
 export default function About() {
     return (
         <React.Fragment>
-            <div className="jbm-about">
-                <div className="jbm-banner"></div>
+            <div className="about">
+                <div className="about-banner">
                 <img src={artist} width='100%' />
-
+                </div>
                 <div className="container">
-
                     <h1>
                         Mala Cindy is an artist
                         who has learned among masters ...
