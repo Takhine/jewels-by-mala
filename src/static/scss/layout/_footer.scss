@@ -20,6 +20,9 @@
         a{
             text-decoration: none;
             color: $primary-grey;
+            .MuiListItem-gutters{
+                padding-right: 0;
+            }
         }
     }
     hr{

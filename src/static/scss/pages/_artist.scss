@@ -35,6 +35,9 @@
         }
         .artist-text{
             padding: 0;
+            @include mmd{ 
+                padding-right: 80px;
+            }
         }
         .promise-container{
             @extend .quote-container;
