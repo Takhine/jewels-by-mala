@@ -1,10 +1,10 @@
 import React from 'react'; 
 
- const Collections=()=> {
+ const Collection=()=> {
     return (
         <div className="container">
             <h1>Collections</h1>
         </div>
     ); 
 }
-export default Collections;
+export default Collection;

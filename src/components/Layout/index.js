@@ -7,6 +7,8 @@ import {
 } from '@material-ui/core'
 import 'static/scss/main.scss';
 import mainBackground from '../../static/images/backgrounds/main-background.png';
+import mainLogo from '../../static/images/main-logo.png';
+
 function Layout(props) {
 
     const [stateIn, setStateIn] = React.useState(true);
@@ -40,10 +42,11 @@ function Layout(props) {
             <div id="navigation-menu">
 
                 <div className="menu-items">
-                    <List button>
+                    <List>
+                        <ListItem><img src={mainLogo}className="logo-container" alt="Jewels by Mala"/></ListItem>
                         <ListItem onClick={() => closeNav('about')}>About</ListItem>
                         <ListItem onClick={() => closeNav('artist')}>Artist</ListItem>
-                        <ListItem onClick={() => closeNav('collections')}>Collections</ListItem>
+                        <ListItem onClick={() => closeNav('collection')}>Collections</ListItem>
                         <ListItem onClick={() => closeNav('testimonials')}>Testimonials</ListItem>
                         <ListItem onClick={() => closeNav('contact')}>Contact</ListItem>
                     </List>

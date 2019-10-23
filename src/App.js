@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from './components/Layout';
 
 import About from 'pages/About';
-import Collections from 'pages/Collections'; 
+import Collection from 'pages/Collection'; 
 import Artist from 'pages/Artist'; 
 import Testimonials from 'pages/Testimonials'; 
 import Diamonds from 'pages/Diamonds'; 
@@ -23,7 +23,7 @@ function App() {
       <Layout>
         <Switch>
           <Route  path="/about" exact component={About} />
-          <Route  path="/collections" exact component={Collections} />
+          <Route  path="/collection" exact component={Collection} />
           <Route  path="/contact" exact component={Contact} />
           <Route  path="/artist" exact component={Artist} />
           <Route  path="/diamonds" exact component={Diamonds} />
