@@ -19,10 +19,15 @@
         }
         a{
             text-decoration: none;
-            color: $primary-grey;
-            .MuiListItem-gutters{
-                padding-right: 0;
-            }
+            
+        }
+        .MuiListItem-root{
+            width: auto;
+            color: $primary-grey;            
+        }
+        .MuiListItem-gutters{
+            padding-right: 8px;
+            padding-left: 8px;
         }
     }
     hr{

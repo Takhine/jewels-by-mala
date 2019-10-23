@@ -1,0 +1,27 @@
+.about{
+        .banner{
+        height: auto;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        }
+        .about-text-container{
+            padding-top: 0;
+            .about-grid{
+                height: 100%;
+                @include xl{
+                    height: 100vh;
+                }
+                .about-text{
+                    color: $primary-white;
+                    padding-top: 80px;
+                    padding-left: 60px;
+                    padding-right: 80px;
+    
+                }
+            } 
+            }
+}

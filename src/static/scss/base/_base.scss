@@ -26,3 +26,14 @@
     width: 100%;
     margin: 0;
 }
+
+.no-scroll{
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+}
+.scroll{
+    overflow: auto;
+    position: relative;
+    height: 100%;
+}

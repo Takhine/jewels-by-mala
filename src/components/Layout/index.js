@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 
 import { withRouter } from 'react-router-dom';
 import {
@@ -7,6 +7,7 @@ import {
     Button
 } from '@material-ui/core'
 
+import { NavLink } from 'react-router-dom';
 import 'static/scss/main.scss';
 import Footer from './Footer';
 // Images
@@ -18,9 +19,32 @@ import facebook from '../../static/images/icons/facebook-icon-main.png';
 import instagram from '../../static/images/icons/instagram-icon-main.png';
 import twitter from '../../static/images/icons/twitter-icon-main.png';
 
-
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+  }
+   function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = useState(
+      getWindowDimensions()
+    );
+  
+    useEffect(() => {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+  
+    return windowDimensions;
+  }
 
 function Layout(props) {
+    const { height, width } = useWindowDimensions();
 
     const [stateIn, setStateIn] = React.useState(true);
     const [stateFooter, setFooterIn] = React.useState(true);
@@ -36,7 +60,7 @@ function Layout(props) {
         } else {
             setStateIn(false);
         }
-        switch(props.history.location.pathname){
+        switch (props.history.location.pathname) {
             case '/artist':
                 setFooterIn(true);
                 break;
@@ -64,51 +88,42 @@ function Layout(props) {
 
     return (
 
-        <div className="main-container">
+        <div className="main-container" className={stateIn ? 'no-scroll':'scroll'}>
             {/* Navigation Panel */}
-            <div id="navigation-menu">
+            <div id="navigation-menu" className={stateIn ? 'pageOpen' : 'pageClose'}>
+                <div className="overlay">
+                    <div className="menu-opened" style={{ width: width }}>
+                        <div className="main-title">
+                            <img src={mainTitle} alt="Jewels By Mala" />
+                        </div>
+                        <div className="menu-items">
+                            <List>
+                                <ListItem onClick={() => closeNav('artist')}>Artist</ListItem>
+                            </List>
+                        </div>
+                        <div className="main-copyright"  style={{ width: width }}>
+                            <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created by Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
+                        </div>
+                        <img id="background" src={mainBackground} width={width} />
+                    </div>
 
-                <div className="main-title">
-                    <img src={mainTitle} alt="Jewels By Mala"/>
                 </div>
-                <div className="menu-items">
-                    <List>
-                        <ListItem><img src={mainLogo}className="logo-container" alt="Jewels by Mala"/></ListItem>
-                        <ListItem onClick={() => closeNav('about')}>About</ListItem>
-                        <ListItem onClick={() => closeNav('artist')}>Artist</ListItem>
-                        <ListItem onClick={() => closeNav('collection')}>Collections</ListItem>
-                        <ListItem onClick={() => closeNav('testimonials')}>Testimonials</ListItem>
-                        <ListItem onClick={() => closeNav('contact')}>Contact</ListItem>
-                        <ListItem>
-                            <div className="social-container">
-                                <img src={pinterest} alt="Pinterest"/>
-                                <img src={facebook} alt="Facebook"/>
-                                <img src={instagram} alt="Instagram"/>
-                                <img src={twitter} alt="Twitter"/>
 
-                            </div>
-                        </ListItem>
-                    </List>
-                </div>
-                <div className="main-copyright">
-                    <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created by Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
-                </div>
-                <img id="background" src={mainBackground} width='100%' />
             </div>
             {/* Sidebar */}
             <div id="sidebar" className={stateIn ? 'sidebarOpen' : 'sidebarClosed'}>
-                <Button id="side-menu-icon" onClick={() => openNav()}>&nbsp;</Button>
+                    <Button id="side-menu-icon" onClick={() => openNav()}>&nbsp;</Button>
                 <p className="sidebar-title">{sidebarName}</p>
             </div>
 
 
             {/** MAIN PAGE CONTENT */}
-            <div id="current-page" className={stateIn ? 'pageOpen' : 'pageClose'}>
+            <div id="current-page">
 
                 {props.children}
                 {/* Footer */}
                 {stateFooter &&
-                <Footer />
+                    <Footer open={openNav} />
                 }
             </div>
         </div>

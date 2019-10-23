@@ -1,0 +1,319 @@
+import React from 'react';
+
+import { withRouter } from 'react-router-dom';
+import {
+    List,
+    ListItem,
+    Button
+} from '@material-ui/core'
+
+import 'static/scss/main.scss';
+import Footer from './Footer';
+// Images
+import mainBackground from '../../static/images/backgrounds/main-background.png';
+import mainTitle from '../../static/images/main-title.png';
+import mainLogo from '../../static/images/main-logo.png';
+import pinterest from '../../static/images/icons/pinterest-icon-main.png';
+import facebook from '../../static/images/icons/facebook-icon-main.png';
+import instagram from '../../static/images/icons/instagram-icon-main.png';
+import twitter from '../../static/images/icons/twitter-icon-main.png';
+
+
+
+function Layout(props) {
+
+    const [stateIn, setStateIn] = React.useState(true);
+    const [stateFooter, setFooterIn] = React.useState(true);
+
+    const [sidebarName, setSidebar] = React.useState('');
+
+
+    React.useEffect(() => {
+        console.log(props.history)
+
+        if (props.history.location.pathname === '/') {
+            setStateIn(true);
+        } else {
+            setStateIn(false);
+        }
+        switch(props.history.location.pathname){
+            case '/artist':
+                setFooterIn(true);
+                break;
+            case '/collection':
+                setFooterIn(true);
+                break;
+            case '/diamonds':
+                setFooterIn(true);
+                break;
+            default:
+                setFooterIn(false);
+                break;
+        }
+    }, [props.history.location.key])
+
+    const openNav = () => {
+        setStateIn(true);
+    }
+
+    const closeNav = (page) => {
+        setStateIn(false);
+        setSidebar(page);
+        props.history.push(`/${page}`)
+    }
+
+    return (
+
+        <div className="main-container">
+            {/* Navigation Panel */}
+            <div id="navigation-menu">
+
+                <div className="main-title">
+                    <img src={mainTitle} alt="Jewels By Mala"/>
+                </div>
+                <div className="menu-items">
+                    <List>
+                        <ListItem><img src={mainLogo}className="logo-container" alt="Jewels by Mala"/></ListItem>
+                        <ListItem onClick={() => closeNav('about')}>About</ListItem>
+                        <ListItem onClick={() => closeNav('artist')}>Artist</ListItem>
+                        <ListItem onClick={() => closeNav('collection')}>Collections</ListItem>
+                        <ListItem onClick={() => closeNav('testimonials')}>Testimonials</ListItem>
+                        <ListItem onClick={() => closeNav('contact')}>Contact</ListItem>
+                        <ListItem>
+                            <div className="social-container">
+                                <img src={pinterest} alt="Pinterest"/>
+                                <img src={facebook} alt="Facebook"/>
+                                <img src={instagram} alt="Instagram"/>
+                                <img src={twitter} alt="Twitter"/>
+
+                            </div>
+                        </ListItem>
+                    </List>
+                </div>
+                <div className="main-copyright">
+                    <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created by Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
+                </div>
+                <img id="background" src={mainBackground} width='100%' />
+            </div>
+            {/* Sidebar */}
+            <div id="sidebar" className={stateIn ? 'sidebarOpen' : 'sidebarClosed'}>
+                <Button id="side-menu-icon" onClick={() => openNav()}>&nbsp;</Button>
+                <p className="sidebar-title">{sidebarName}</p>
+            </div>
+
+
+            {/** MAIN PAGE CONTENT */}
+            <div id="current-page" className={stateIn ? 'pageOpen' : 'pageClose'}>
+
+                {props.children}
+                {/* Footer */}
+                {stateFooter &&
+                <Footer />
+                }
+            </div>
+        </div>
+    )
+}
+
+export default withRouter(Layout); 
+
+
+
+
+*{
+  margin: 0px; 
+}
+.main-container{
+  overflow: hidden;
+  height: 100vh;
+  #navigation-menu {
+    background-color: black;
+    color: white; 
+    overflow: hidden;
+    position:absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include xl{
+      align-items: unset;
+    }
+    .main-title{
+      position: absolute;
+      z-index: 1;
+      top: 40px;
+      @include xl{
+        left: 10%;
+        top: unset;
+      }
+      @include rwd(1200,1400){
+        left: 40px;
+      }
+      @media (orientation:landscape) and (max-height:500px) and (max-width:840px) {
+        left: 40px;
+        top: unset;
+      }
+      img{
+        @include rwd(768,1200){
+          width: 600px;
+          }
+        @include rwd(320,599){
+          width: 300px;
+        }
+          
+        @include rwd(600,767){
+          width: 500px;
+        }
+          
+        @include xl{
+          width: 478px;
+        }
+        @media (orientation:landscape) and (max-height:500px) and (max-width:840px) {
+          width: 200px;
+        }
+         
+        }
+      }
+      .menu-items{
+        text-align: center;
+        position: absolute;
+        z-index: 2;
+        font-size: 24px;
+        @include xl{
+          right: 15%;
+        }
+        @media (orientation:landscape) and (max-height:600px) and (max-width:840px) {
+         right: 15%;
+         font-size: x-small;
+        }
+        @media (min-height:1024px) and (max-width:1024px) {
+          font-size: 32px;
+        }
+        .MuiListItem-root{
+          justify-content: center;
+
+          @include xl{
+            justify-content: flex-start;
+          }
+        }
+        .logo-container{
+          margin-bottom: 20px;
+        }
+        .social-container{
+          width: 70px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      #background{
+        height: auto;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        opacity: 0.6;
+        @include msm{
+          transform: translate3d(-80px, 60px, 0px)
+        }
+        @include xl{
+          opacity: 1;
+        }
+      }
+      .main-copyright{
+        position: absolute;
+        bottom: 15px;
+        text-align: center;
+        font-size: 12px;
+        width: 100%;
+        word-spacing: 2px;
+        z-index: 1  ;
+        @include xl{
+          left: 10%;
+          font-size: 14px;
+          width: auto;
+        }
+        @include rwd(1200,1400){
+          left: 40px;
+        }
+      }
+    }
+    #sidebar{
+      background-color: $primary-black;
+      width: 100vw;
+      height: 70px;
+      top: 0;
+      position: fixed;
+      transition: all .8s ease;
+      -webkit-transition: all .8s ease; 
+      z-index: 1001;
+      @include xl{
+        width: 70px;
+        height: 100vh;
+      }
+      .sidebar-title{
+        display: none;
+        text-transform: capitalize;
+        @include xl{
+          transform: rotate(-90deg);
+          position: absolute;
+          color: white;
+          right: 0;
+          left: 0;
+          font-size: 24px;
+          top: 50%;
+          display: block;
+        }
+      }
+    }
+    #current-page {
+      position: relative;
+      color: $primary-black; 
+      height: 100vh;  
+      z-index: 1000; 
+      width: 100%;
+      transition: all .6s ease-in;
+      -webkit-transition: all .6s ease-in; 
+      background-color: white;
+      margin-top: 70px;
+      margin-left: 0;
+      overflow: auto;
+      @include xl{
+        margin-top: 0;
+      }
+    }       
+}
+
+
+
+
+       
+
+.pageClose {
+  transform: translateY(0%);
+}
+
+.pageOpen {
+  transform: translateY(200%);
+
+  @include xl{
+    transform: translateX(100vw);
+  }
+}
+
+.sidebarClose {
+  transform: translateY(0px);
+  @include xl{
+  transform: translateX(0px);
+
+  }
+}
+
+.sidebarOpen {
+  transform: translateY(-70px);
+  @include xl{
+  transform: translateX(-70px);
+
+  }
+}

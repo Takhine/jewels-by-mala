@@ -9,24 +9,22 @@ import facebook from '../../static/images/icons/facebook-icon.png';
 import instagram from '../../static/images/icons/instagram-icon.png';
 import twitter from '../../static/images/icons/twitter-icon.png';
 import { NavLink } from 'react-router-dom';
-const Footer = () => {
+const Footer = (props) => {
     return (
         <div className="container footer">
             <List className="footer-list">
-                <NavLink exact to="/">
-                    <ListItem>Home</ListItem>
-                </NavLink>
+                    <ListItem button onClick={props.open}>Home</ListItem>
                 <NavLink exact to="/artist">
-                    <ListItem>Artist</ListItem>
+                    <ListItem button>Artist</ListItem>
                 </NavLink>
                 <NavLink exact to="/collection">
-                    <ListItem>Collection</ListItem>
+                    <ListItem button>Collection</ListItem>
                 </NavLink>
                 <NavLink exact to="/testimonials">
-                    <ListItem>Testimonials</ListItem>
+                    <ListItem button>Testimonials</ListItem>
                 </NavLink>
                 <NavLink exact to="/contact">
-                    <ListItem>Contact</ListItem>
+                    <ListItem button>Contact</ListItem>
                 </NavLink>
             </List>
             <hr />
