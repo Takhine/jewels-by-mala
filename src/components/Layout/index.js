@@ -3,7 +3,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import {
     List,
-    ListItem
+    ListItem,
+    Button
 } from '@material-ui/core'
 
 import 'static/scss/main.scss';
@@ -80,8 +81,8 @@ function Layout(props) {
             </div>
             {/* Sidebar */}
             <div id="sidebar" className={stateIn ? 'sidebarOpen' : 'sidebarClosed'}>
-                <button onClick={() => openNav()}>X</button>
-                <p>{sidebarName}</p>
+                <Button id="side-menu-icon" onClick={() => openNav()}>&nbsp;</Button>
+                <p className="sidebar-title">{sidebarName}</p>
             </div>
 
 

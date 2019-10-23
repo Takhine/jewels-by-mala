@@ -103,7 +103,7 @@
       }
       .main-copyright{
         position: absolute;
-        bottom: 5px;
+        bottom: 15px;
         text-align: center;
         font-size: 12px;
         width: 100%;
@@ -131,6 +131,19 @@
       @include xl{
         width: 70px;
         height: 100vh;
+      }
+      .sidebar-title{
+        display: none;
+        @include xl{
+          transform: rotate(-90deg);
+          position: absolute;
+          color: white;
+          right: 0;
+          left: 0;
+          font-size: 24px;
+          top: 50%;
+          display: block;
+        }
       }
     }
     #current-page {
