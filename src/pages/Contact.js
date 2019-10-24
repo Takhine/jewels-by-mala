@@ -107,7 +107,7 @@ const Contact = () => {
                             <FormControlLabel
                                 value="end"
                                 control={<Checkbox color="primary" />}
-                                label="End"
+                                label="I have read and accept the privacy policy*"
                                 labelPlacement="end"
                             />
                         </FormGroup>
