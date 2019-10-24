@@ -182,6 +182,7 @@
   z-index: 1;
   left: 0;
   top: 90%;
+  display: none;
   @include xl{
     font-size: 14px;
     width: auto;
@@ -189,6 +190,7 @@
     height: auto !important;
     bottom: 15px;
     left: 80px;
+    display: block;
   }
   @include rwd(1200,1400){
     left: 40px;

@@ -1,0 +1,45 @@
+.collection-container{
+    padding-top: 70px;
+    @include xl{
+        padding-left: 70px;
+        padding-top: 0;
+    }
+    .collection-grid{
+        height: 100vh;
+        .diamonds-side{
+            background-color: $secondary-black;
+            color: $primary-white;
+            .collection-link{
+                margin-left: 70px;
+            }
+        }
+        }
+        .uncut-side{
+            background-color: $primary-white;
+            color: $secondary-black;
+            .uncut-side-content{
+                margin-bottom: 23px;
+                .seperate-title{
+                    margin-left: 30px;
+                }
+            }
+        }
+        .diamonds-side,.uncut-side{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font-size: 50px;
+                font-weight: 200;
+            }
+            a{
+                color: $primary-brown;
+                border-bottom: 1px solid $primary-brown;
+                text-transform: uppercase;
+                font-size: $small-font;
+            }
+            .diamond-title{
+                margin-bottom: 10px;
+            }
+    }
+}

@@ -1,6 +1,8 @@
 .artist{
+    padding-top: 70px;
     @include xl{
         padding-bottom: 0;
+        padding-top: 0;
     }
     .artist-banner{
         .banner{
