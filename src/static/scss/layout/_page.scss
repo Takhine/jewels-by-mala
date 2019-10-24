@@ -58,11 +58,15 @@ $gold_color: #8d7249;
   transition: 0.3s;
   border: none;
   margin: auto;
-  width: 100%;
   height: 30px;
-  margin-top: 40px;
+  width: auto;
+  margin-top: 20px;
   &:focus,&:active{
     border: none;
+  }
+  @include xl{
+    width: 100%;
+    margin-top: 40px;
   }
 }
 

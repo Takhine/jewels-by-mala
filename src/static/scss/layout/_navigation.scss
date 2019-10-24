@@ -10,9 +10,21 @@
   transition: all .8s ease;
   -webkit-transition: all .8s ease; 
   z-index: 1000;
+  cursor: pointer;
   @include xl{
     width: 70px;
     height: 100vh;
+  }
+  .sidebar-logo-container{
+    text-align: center;
+    margin-top: 20px;
+    img{
+      width: 35px;
+    }
+    display: none;
+    @include xl {
+      display: block;
+    }
   }
   .sidebar-title{
     display: none;
@@ -24,7 +36,7 @@
       right: 0;
       left: 0;
       font-size: 24px;
-      top: 50%;
+      top: 55%;
       display: block;
     }
   }
