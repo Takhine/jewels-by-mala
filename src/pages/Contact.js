@@ -46,7 +46,7 @@ const Contact = () => {
             <div className="contact-box">
                 <h2>Contact us</h2>
                 <Grid className="contact-grid" container spacing={2}>
-                    <Grid className="contact-field-container" item xs={6}>
+                    <Grid className="contact-field-container" item xs={12} sm={6}>
                         <TextField
                             className="contact-field"
                             label="Name"
@@ -57,7 +57,7 @@ const Contact = () => {
                             }}
                         />
                     </Grid>
-                    <Grid className="contact-field-container" item xs={6}>
+                    <Grid className="contact-field-container" item xs={12} sm={6}>
                         <TextField
                             id="standard-name"
                             label="Phone"
@@ -69,7 +69,7 @@ const Contact = () => {
                         />
                     </Grid>
 
-                    <Grid className="contact-field-container" item xs={6}>
+                    <Grid className="contact-field-container" item xs={12} sm={6}>
                         <TextField
                             id="standard-name"
                             label="Your Email"
@@ -80,7 +80,7 @@ const Contact = () => {
                             }}
                         />
                     </Grid>
-                    <Grid className="contact-field-container" item xs={6}>
+                    <Grid className="contact-field-container" item xs={12} sm={6}>
                         <TextField
                             id="standard-select-currency"
                             select

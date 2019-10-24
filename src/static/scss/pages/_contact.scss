@@ -1,22 +1,42 @@
 .contact{
-    display: flex;
-    height: 100vh;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     @media (orientation:landscape) and (max-width:900px) {
     padding-top: 120px;
         
     }
     @include xl{
         width: calc(100vw - 127px);
-        padding-top: 0;
+        padding-top: 120px;
     }
     @extend .container;
     @include xl{
         padding-left: 70px;
     }
     .contact-box{
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 40px 16px;
+        h2{
+            font-weight: 200;
+            @include xl{
+                font-size: 50px;
+            }
+            @include mmd{
+                font-size: 38px;
+            }
+        }
+        @include msm{
+            padding: 40px 60px;
+        }
+        @include md{
+            padding: 40px 160px 40px;
+            margin: auto;
+
+        }
+        @include xl{
+            padding: 40px 160px 40px 200px;
+            margin: auto;
+        }
         .contact-grid{
             margin: 1px;
             .contact-field-container{

@@ -39,6 +39,9 @@
                 
                 .about-text{
                     color: $primary-white;
+                    h2{
+                        font-size: medium;
+                    }
                     @include msm{
                         padding-left: 60px;
                         padding-right: 80px;
