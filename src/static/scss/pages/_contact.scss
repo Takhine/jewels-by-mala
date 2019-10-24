@@ -1,0 +1,66 @@
+.contact{
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @media (orientation:landscape) and (max-width:900px) {
+    padding-top: 120px;
+        
+    }
+    @include xl{
+        width: calc(100vw - 127px);
+        padding-top: 0;
+    }
+    @extend .container;
+    @include xl{
+        padding-left: 70px;
+    }
+    .contact-box{
+        .contact-grid{
+            margin: 1px;
+            .contact-field-container{
+                margin-bottom: 20px;
+                padding-right: 0;
+                .MuiTextField-root{
+                    width: 100%;
+                    text-transform: uppercase;
+                    .MuiFormLabel-root{
+                        text-transform: uppercase;
+                    }
+                    .MuiInputBase-input{
+                        text-transform: uppercase;
+
+                    }
+                    .MuiFormLabel-root.Mui-focused{
+                        color: $primary-grey;
+                    }
+                }
+                .MuiSelect-select:focus{
+                    background-color: white;
+                }
+                
+                .MuiInput-underline:after{
+                    border-bottom: 2px solid $primary-grey;
+                }
+            }
+            textarea{
+                width: 100%;
+                margin-top: 20px;
+                border: 1px solid $primary-black;
+                &:focus{
+                    border: 1px solid $primary-grey;
+                }
+            }
+        }
+        .button-row{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 8px;
+            .MuiButton-label{
+                border-bottom: 1px solid $primary-black;
+            }
+        }
+        
+    }
+}

@@ -41,6 +41,12 @@
                 border-bottom: 1px solid $primary-brown;
                 text-transform: uppercase;
                 font-size: $small-font;
+                transition: 0.4s;
+                padding-left: 0;
+                &:hover{
+                    transition: 0.4s;
+                    padding-left: 7px;
+                }
             }
             .diamond-title{
                 margin-bottom: 10px;

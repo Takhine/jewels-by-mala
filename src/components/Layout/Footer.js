@@ -11,7 +11,7 @@ import twitter from '../../static/images/icons/twitter-icon.png';
 import { NavLink } from 'react-router-dom';
 const Footer = (props) => {
     return (
-        <div className="container footer">
+        <div className="footer container">
             <List className="footer-list">
                     <ListItem button onClick={props.open}>Home</ListItem>
                 <NavLink exact to="/artist">

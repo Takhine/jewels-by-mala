@@ -1,5 +1,13 @@
 .footer{
     background-color: $secondary-black;
+    z-index: 2000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    @include xl{
+        padding:40px 80px;
+        padding-left: 40px;
+    }
     .footer-list{
         display: flex;
         flex-direction: row;

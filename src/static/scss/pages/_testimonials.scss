@@ -1,0 +1,18 @@
+.testimonial{
+    padding-top: 70px;
+    @include xl{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .testimonial-banner{
+        .banner{
+            vertical-align: bottom;
+        }
+    }
+    .testimonial-content{
+        @include xl{
+        padding-left: 70px;
+
+        }
+    }
+}
