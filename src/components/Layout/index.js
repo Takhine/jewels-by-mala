@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { withRouter } from 'react-router-dom';
 import {
@@ -64,22 +64,35 @@ function Layout(props) {
 
     return (
 
-        <div className="main-container" className={stateIn ? 'no-scroll':'scroll'}>
+        <div className="main-container" className={stateIn ? 'no-scroll' : 'scroll'}>
             {/* Navigation Panel */}
             <div id="navigation-menu" className={stateIn ? 'pageOpen' : 'pageClose'}>
                 <div className="overlay">
-                    <div className="menu-opened" style={{ width: width }}>
+                    <div className="menu-opened" style={{ width: width, height:height }}>
                         <div className="main-title">
                             <img src={mainTitle} alt="Jewels By Mala" />
                         </div>
                         <div className="menu-items">
                             <List>
+                                <ListItem><img src={mainLogo} className="logo-container" alt="Jewels by Mala" /></ListItem>
+                                <ListItem onClick={() => closeNav('about')}>About</ListItem>
                                 <ListItem onClick={() => closeNav('artist')}>Artist</ListItem>
+                                <ListItem onClick={() => closeNav('collection')}>Collections</ListItem>
+                                <ListItem onClick={() => closeNav('testimonials')}>Testimonials</ListItem>
+                                <ListItem onClick={() => closeNav('contact')}>Contact</ListItem>
+                                <ListItem>
+                                    <div className="social-container">
+                                        <img src={pinterest} alt="Pinterest" />
+                                        <img src={facebook} alt="Facebook" />
+                                        <img src={instagram} alt="Instagram" />
+                                        <img src={twitter} alt="Twitter" />
+
+                                    </div>
+                                </ListItem>
                             </List>
                         </div>
-                        <div className="main-copyright"  style={{ width: width }}>
-      
-                            <p>width: {width} ~ height: {height}</p>
+                        <div className="main-copyright" style={{width:width, height:height}}>
+                            <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created by Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
                         </div>
                         <img id="background" src={mainBackground} width={width} />
                     </div>
@@ -89,7 +102,7 @@ function Layout(props) {
             </div>
             {/* Sidebar */}
             <div id="sidebar" className={stateIn ? 'sidebarOpen' : 'sidebarClosed'}>
-                    <Button id="side-menu-icon" onClick={() => openNav()}>&nbsp;</Button>
+                <Button id="side-menu-icon" onClick={() => openNav()}>&nbsp;</Button>
                 <p className="sidebar-title">{sidebarName}</p>
             </div>
 

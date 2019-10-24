@@ -48,6 +48,65 @@
   
   z-index: 999;
   }
+  #background{
+    height: auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+    position: absolute;
+    z-index: -1;
+    top:0;
+    @include msm{
+      transform: translate3d(-80px, 60px, 0px)
+    }
+    @include xl{
+      opacity: 1;
+    }
+  }
+  .main-title{
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    @include xl{
+      left: 80px;
+      top: 50%;
+      position: absolute;
+      text-align: left;
+    }
+    @include rwd(1200,1400){
+      left: 40px;
+      text-align: left;
+    }
+    @media (orientation:landscape) and (max-height:500px) and (max-width:840px) {
+      left: 40px;
+      top: 40%;
+      text-align: left;
+    }
+    img{
+      @include rwd(768,1200){
+        width: 600px;
+        }
+      @include rwd(320,599){
+        width: 300px;
+      }
+        
+      @include rwd(600,767){
+        width: 500px;
+      }
+        
+      @include xl{
+        width: 478px;
+      }
+      @media (orientation:landscape) and (max-height:500px) and (max-width:840px) {
+        width: 200px;
+      }
+       
+      }
+    }
 .main-container{
     .menu-opened{
       background-color: #000;
@@ -60,6 +119,7 @@
       display: -ms-flexbox;
       display: flex;
       position: absolute;
+      
     }
     
     #current-page {
@@ -73,10 +133,67 @@
       }
     }       
 }
+.menu-items{
+  text-align: center;
+  z-index: 2;
+  font-size: 24px;
+  @include xl{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+    top: 30%;
+    position: relative;
+  }
+  @media (orientation:landscape) and (max-height:600px) and (max-width:840px) {
+    font-size: x-small;
+    padding-right: 80px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 20px;
+    margin: auto;
+  }
+  @media (min-height:1024px) and (max-width:1024px) {
+    font-size: 32px;
+  }
+  .MuiListItem-root{
+    justify-content: center;
+
+    @include xl{
+      justify-content: flex-start;
+    }
+  }
+  .logo-container{
+    margin-bottom: 20px;
+  }
+  .social-container{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 
-
-
+.main-copyright{
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+  word-spacing: 2px;
+  z-index: 1;
+  left: 0;
+  top: 90%;
+  @include xl{
+    font-size: 14px;
+    width: auto;
+    text-align: left;
+    height: auto !important;
+    bottom: 15px;
+    left: 80px;
+  }
+  @include rwd(1200,1400){
+    left: 40px;
+  }
+}
        
 
 .pageOpen{
