@@ -74,7 +74,9 @@ function Layout(props) {
                         </div>
                         <div className="menu-items">
                             <List>
-                                <ListItem><img src={mainLogo} className="logo-container" alt="Jewels by Mala" /></ListItem>
+                                <ListItem>
+                                    <img src={mainLogo} className="logo-container" alt="Jewels by Mala" width={50}/>
+                                </ListItem>
                                 <ListItem onClick={() => closeNav('about')}>About</ListItem>
                                 <ListItem onClick={() => closeNav('artist')}>Artist</ListItem>
                                 <ListItem onClick={() => closeNav('collection')}>Collections</ListItem>
@@ -82,10 +84,10 @@ function Layout(props) {
                                 <ListItem onClick={() => closeNav('contact')}>Contact</ListItem>
                                 <ListItem>
                                     <div className="social-container">
-                                        <img src={pinterest} alt="Pinterest" />
-                                        <img src={facebook} alt="Facebook" />
-                                        <img src={instagram} alt="Instagram" />
-                                        <img src={twitter} alt="Twitter" />
+                                        <img src={pinterest} alt="Pinterest" width={14} />
+                                        <img src={facebook} alt="Facebook" width={14}/>
+                                        <img src={instagram} alt="Instagram" width={14}/>
+                                        <img src={twitter} alt="Twitter" width={14}/>
 
                                     </div>
                                 </ListItem>
