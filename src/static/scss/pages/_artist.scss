@@ -29,6 +29,14 @@
             .quote{
                 h2{
                     font-weight: 200;
+                    letter-spacing: 1px;
+                    font-size: 14px;
+                    @include msm{
+                        font-size: 25px;
+                    }
+                    @include md{
+                        font-size: 35px;
+                    }
                 }
                 &:first-child{
                     text-align: center;
@@ -52,6 +60,14 @@
                 margin: 0 15%;
                 h2{
                     font-weight: 200;
+                    letter-spacing: 1px;
+                    font-size: 14px;
+                    @include msm{
+                        font-size: 25px;
+                    }
+                    @include md{
+                        font-size: 35px;
+                    }
                 }
             }
         }

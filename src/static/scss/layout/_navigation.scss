@@ -27,6 +27,8 @@
     }
   }
   .sidebar-title{
+    font-weight: 100;
+    letter-spacing: 1px;
     display: none;
     text-transform: capitalize;
     @include xl{
@@ -84,7 +86,7 @@
     right: 0;
     text-align: center;
     @include xl{
-      left: 80px;
+      left: 160px;
       top: 50%;
       position: absolute;
       text-align: left;
@@ -202,7 +204,7 @@
     text-align: left;
     height: auto !important;
     bottom: 15px;
-    left: 80px;
+    left: 160px;
     display: block;
   }
   @include rwd(1200,1400){

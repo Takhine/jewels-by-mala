@@ -1,5 +1,6 @@
 .testimonial{
     padding-top: 70px;
+    width: 100vw;
     @include xl{
         padding-top: 0;
         padding-bottom: 0;
@@ -12,20 +13,13 @@
     .testimonial-content{
         @include xl{
         padding-left: 70px;
+        padding: 20px;
         }
         .slider-container{
             text-align: center;
-            padding:40px;
             padding-top: 120px;
-            @include rwd(600,767){
-                padding:120px
-            }
-            @include xl{
-                padding: 140px;
-            }
             .slider-text-container{
                 color: $primary-brown;
-                // @include 
                 @include xl{
                     font-size: 25px;
                 }
@@ -38,8 +32,8 @@
 
             .slick-slider{
 
-                @include msm{
-                    padding: 0;
+                @include rwd(300, 768){
+                    padding: 0 40px;
                 }
                 @include mmd{
                     padding: 20px 40px 0;
@@ -57,23 +51,39 @@
                     }
                 }
                 .left-arrow{
-                    left: -40px;
-                    @include rwd(600,768){
-                        left: -55px;
+                    @include xs{
+                        left: 0;
                     }
                     @include md{
-                        left: -10px;
+                        // left: -10px;
+                        left: 50px;
                     }
-                }
-                .right-arrow{
-                    right:-40px;
-                    @include rwd(600,768){
-                        right: -55px;
-                    }
-                    @include md{
-                        right: -10px;
+                    @include mmd{
+                        left: 130px;
 
                     }
+                    @include rwd(1200,1300){
+                        left: 80px;
+                    }
+                   
+                }
+                .right-arrow{
+                    @include xs{
+                        right: 0;
+                    }
+                    @include md{
+                        right: 50px;
+
+                    }
+                    @include mmd{
+                        right: 130px;
+
+                    }
+                    
+                    @include rwd(1200,1300){
+                        right: 80px;
+                    }
+                    
                 }
             }
         }

@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 import leftArrow from '../static/images/icons/left-arrow.png';
 import rightArrow from '../static/images/icons/right-arrow.png';
 
+import useWindowDimensions from '../components/windowDimension';
+
 const settings = {
     dots: false,
     infinite: true,
@@ -44,6 +46,8 @@ function RightNavButton(props) {
     );
 }
 const Testimonials = () => {
+    const { height, width } = useWindowDimensions();
+
     return (
         <div className="testimonial">
             <div className="testimonial-banner">
