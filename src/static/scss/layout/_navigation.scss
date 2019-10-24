@@ -21,6 +21,10 @@
     img{
       width: 35px;
     }
+    display: none;
+    @include xl {
+      display: block;
+    }
   }
   .sidebar-title{
     display: none;
