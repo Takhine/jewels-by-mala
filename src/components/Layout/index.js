@@ -6,10 +6,9 @@ import {
     ListItem,
     Button
 } from '@material-ui/core'
-
-import { NavLink } from 'react-router-dom';
 import 'static/scss/main.scss';
 import Footer from './Footer';
+import useWindowDimensions from '../windowDimension';
 // Images
 import mainBackground from '../../static/images/backgrounds/main-background.png';
 import mainTitle from '../../static/images/main-title.png';
@@ -19,29 +18,6 @@ import facebook from '../../static/images/icons/facebook-icon-main.png';
 import instagram from '../../static/images/icons/instagram-icon-main.png';
 import twitter from '../../static/images/icons/twitter-icon-main.png';
 
-function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height
-    };
-  }
-   function useWindowDimensions() {
-    const [windowDimensions, setWindowDimensions] = useState(
-      getWindowDimensions()
-    );
-  
-    useEffect(() => {
-      function handleResize() {
-        setWindowDimensions(getWindowDimensions());
-      }
-  
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
-  
-    return windowDimensions;
-  }
 
 function Layout(props) {
     const { height, width } = useWindowDimensions();
@@ -102,7 +78,8 @@ function Layout(props) {
                             </List>
                         </div>
                         <div className="main-copyright"  style={{ width: width }}>
-                            <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created by Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
+      
+                            <p>width: {width} ~ height: {height}</p>
                         </div>
                         <img id="background" src={mainBackground} width={width} />
                     </div>

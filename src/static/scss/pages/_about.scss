@@ -1,26 +1,48 @@
 .about{
+
         .banner{
-        height: auto;
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
         z-index: -1;
-        position: absolute;
+        position: fixed;
+        height: 100vh;
+        @include xl{
+        height: 100%;
+
+        }
         }
         .about-text-container{
             padding-top: 0;
+            padding-bottom: 0   ;
+            @include xl{
+                padding-left: 70px;
+            }
+            .overlay{
+                background: rgba(0,0,0,0.6);
+                position: fixed;
+                z-index: -1;
+                height: 100vh;
+                width: 100%;
+                @include xl{
+                    width: 50%;
+                }
+            }
             .about-grid{
                 height: 100%;
+                width: 100%;
+                padding-top: 80px;
                 @include xl{
-                    height: 100vh;
+                    height: 100%;
+                    width: 50%;
                 }
+                
                 .about-text{
                     color: $primary-white;
-                    padding-top: 80px;
-                    padding-left: 60px;
-                    padding-right: 80px;
-    
+                    @include msm{
+                        padding-left: 60px;
+                        padding-right: 80px;
+                    }
                 }
             } 
             }
