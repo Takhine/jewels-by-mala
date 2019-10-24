@@ -6,6 +6,10 @@
     }
     .collection-grid{
         height: 100vh;
+        width: 100vw;
+        @include xl{
+            width: calc(100vw - 90px);
+        }
         .diamonds-side{
             background-color: $secondary-black;
             color: $primary-white;
