@@ -13,6 +13,8 @@ import useWindowDimensions from '../windowDimension';
 import mainBackground from '../../static/images/backgrounds/main-background.png';
 import mainTitle from '../../static/images/main-title.png';
 import mainLogo from '../../static/images/main-logo.png';
+import navLogo from '../../static/images/nav-logo.png';
+
 import pinterest from '../../static/images/icons/pinterest-icon-main.png';
 import facebook from '../../static/images/icons/facebook-icon-main.png';
 import instagram from '../../static/images/icons/instagram-icon-main.png';
@@ -101,8 +103,12 @@ function Layout(props) {
 
             </div>
             {/* Sidebar */}
-            <div id="sidebar" className={stateIn ? 'sidebarOpen' : 'sidebarClosed'}>
-                <Button id="side-menu-icon" onClick={() => openNav()}>&nbsp;</Button>
+            <div id="sidebar" className={stateIn ? 'sidebarOpen' : 'sidebarClosed'} onClick={() => openNav()}>
+                <Button id="side-menu-icon">&nbsp;</Button>
+                <div className="sidebar-logo-container">
+                <img src={navLogo} alt="Jewels by Mala"/>
+
+                </div>
                 <p className="sidebar-title">{sidebarName}</p>
             </div>
 
