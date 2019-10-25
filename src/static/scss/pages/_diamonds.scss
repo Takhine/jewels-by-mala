@@ -1,0 +1,154 @@
+.diamonds{
+    @include rwd(300,599){
+        padding-top: 70px;
+    
+        }
+        @include xl{
+            padding-left: 70px;
+            padding-top: 0;
+        }
+        .large-slider-container{
+            position: relative;
+            @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
+                height: 100% !important;
+                }    
+            .slick-list{
+                height: 100vh;
+                @include rwd(300,599){
+                    height: 100%;
+                }
+            }
+            
+        }
+        .small-slider-container{
+            margin-top: 40px;
+            padding: 20px 40px;
+            .slick-list{
+                height: 100%;
+            }
+        }
+        .slick-right-arrow{
+            background-color: $primary-brown;
+            width: 60px;
+            height: 60px;
+            text-transform: uppercase;
+            position:fixed;
+            z-index: 1;
+            top: 50%;
+            right: 0;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            letter-spacing: 2px;
+            font-size: x-small;
+            cursor: pointer;
+        }
+        .left-arrow{
+            left: 0;
+        }
+        .banner{
+            @media (orientation:landscape) and (max-width: 767px) and (min-height:321px){
+                padding-top: 70px;
+            }
+            @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
+            height: 100%;
+            }        
+        }
+        .banner-content{
+            position: absolute;
+            z-index: 2;
+            bottom: 20%;
+            color: white;
+            @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
+                position: relative;
+                text-align: center;
+                margin-top: 40px;
+                color: black;
+                font-size: smaller;
+                margin-top: 40px;
+                padding: 0 16px;
+                
+            }
+            @include rwd(600,959){
+                right: 2%;
+                bottom: 2%;
+                font-size: smaller;
+            }
+            @include rwd(960,1199){
+                right: 5%;
+            }
+            @include rwd(1200,1439){
+                right: 10%;
+            }
+            @include rwd(1440,3000){
+                right: 20%;
+            }
+            @media (orientation:landscape) and (max-width: 767px){
+                background: rgba(0,0,0,0.6);
+                border-radius: 4px;
+                padding: 12px;
+                bottom: 80px;
+            }
+            h2{
+                font-weight: 100;
+                font-style: italic;
+                font-size: 25px;
+                @include md{
+                    font-size: 35px;
+                }
+            }
+            .side-content{
+                margin-top: 20px;
+                margin-left: 30px;
+            @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
+                margin-left: 0;
+            }
+            @include md{
+                margin-left: 90px;
+    
+            }
+                h3{
+                    margin-bottom: 10px;
+                    font-weight: 200;
+                }
+                p{
+                    font-weight: 200;
+                }
+            }
+        }
+        .left{
+            @extend .banner-content;
+            right: 0;
+            left: 10%;
+            bottom: 40%;
+            @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
+            left: 0;
+            }
+        }
+        .quote-container{
+            display: flex;
+            justify-content: center;
+            background-color: $secondary-black;
+            color: $primary-white;
+            padding: 60px 0 40px;
+            font-size: 12px;
+            @include xl{
+                padding:80px 80px;
+                padding-left: 40px;
+            }
+            .quote{
+                font-weight: 200;
+                letter-spacing: 1px;
+                @include md{
+                    margin: 0 50px;
+                }
+                @include mmd{
+                    margin: 0 100px;
+        
+                }
+                @include xl{
+                    margin: 0 140px;
+                }
+            }
+        }
+}

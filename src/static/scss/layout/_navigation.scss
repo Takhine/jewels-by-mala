@@ -159,11 +159,13 @@
   @include xl{
     display: flex;
     justify-content: flex-end;
-    padding-right: 100px;
     top: 30%;
     position: relative;
     font-size: xx-large;
     right: 10%;
+  }
+  @include rwd(1200,1400){
+    right: 5%;
   }
   @media (orientation:landscape) and (max-height:600px) and (max-width:840px) {
     font-size: x-small;

@@ -64,11 +64,15 @@ function Layout(props) {
 
     const openNav = () => {
         setStateIn(true);
+        setFooterIn(false);
+
     }
 
     const closeNav = (page) => {
         setStateIn(false);
+
         props.history.push(`/${page}`)
+
     }
 
     return (

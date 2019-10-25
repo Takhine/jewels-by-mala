@@ -1,0 +1,26 @@
+[
+    {
+        "title":"Necklaces",
+        "img":"src/static/images/backgrounds/diamond-necklaces-background.png",
+        "subtitle":"Black Label Masterpiece IX, 2016",
+        "description":"Pear-shaped diamonds 12.06 cts, owl-shaped diamonds 93.04 cts <br/> round brilliant-cut diamonds 6.3 cts, diamonds 129.26 cts <br/> 24.7 x 18 x 10 cm",   
+        "styles":"banner-content right",
+        "sellerDesc":"Understatedly elegant...",
+        "images":["../images/diamond/d-necklace-1.png","../images/diamond/d-necklace-2.png","../images/diamond/d-necklace-3.png","../images/diamond/d-necklace-3.png"],
+        "imgTitle":["Diamond Necklace","Diamond Neclace 1", "Diamond Necklace 2", "Diamond Necklace 3"],
+        "imgCts":["29.20 CTS","29.21 CTS","29.22 CTS","29.22 CTS"]
+    
+    },
+    {
+        "title":"Earings",
+        "img":"../images/backgrounds/diamond-earings-background.png",
+        "subtitle":"Floral Petals Earings",
+        "description":"FOUR SEASONS COLLECTION <br/> fancy-cut diamonds 14.21 cts, diamonds 53.28 cts",   
+        "styles":"banner-contentleft",
+        "sellerDesc":"Understatedly elegant...",
+        "images":["../images/diamond/d-earings-1.png","../images/diamond/d-earings-2.png","../images/diamond/d-earings-3.png","../images/diamond/d-earings-3.png"],
+        "imgTitle":["Diamond Earings","Diamond Earings 1", "Diamond Earing 2", "Diamond Earing 3"],
+        "imgCts":["29.20 CTS","29.21 CTS","29.22 CTS","29.22 CTS"]
+    
+    }
+]
