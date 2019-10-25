@@ -139,6 +139,8 @@ function RightCarousel(props) {
     );
 }
 const Diamonds = () => {
+    const [slide, setSlide ] = React.useState(0);
+
     const { height, width } = useWindowDimensions();
     const settings = {
         dots: false,
@@ -149,6 +151,8 @@ const Diamonds = () => {
         slidesToScroll: 1,
         prevArrow: <LeftNavButton />,
         nextArrow: <RightNavButton />,
+    
+        afterChange: current => setSlide(current)
 
     };
     const smallSettings = {
@@ -210,21 +214,6 @@ const Diamonds = () => {
                                     <h3>{diamond.sellerDesc}</h3>
                                 </div>
                             </div>
-                            <div className="small-slider-container">
-                                <Slider {...smallSettings}>
-                                    {diamond.carousel.map((item)=>{
-                                        return(
-                                            <div key={item.imgTitle} className="small-slider">
-                                                <img src={item.img} alt={item.imgTitle} width="300px"/>
-                                                <div className="small-slider-content">
-                                                    <h2>{item.imgTitle}</h2>
-                                                    <p>{item.imgDesc}</p>
-                                                </div>
-                                            </div>
-                                        )
-                                    })}
-                                </Slider>
-                            </div>
                         </div>
 
                     )
@@ -254,6 +243,26 @@ const Diamonds = () => {
                     </div>
                 </div> */}
             </Slider>
+            
+            <pre>{}</pre>
+
+            <div className="small-slider-container">
+                <Slider {...smallSettings}>
+                    {diamondsList[slide].carousel.map((item)=>{
+                        return(
+                            <div key={item.imgTitle} className="small-slider">
+                                <img src={item.img} alt={item.imgTitle} width="300px"/>
+                                <div className="small-slider-content">
+                                    <h2>{item.imgTitle}</h2>
+                                    <p>{item.imgDesc}</p>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </Slider>
+            </div>
+
+
         </div>
     );
 }
