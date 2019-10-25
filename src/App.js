@@ -8,7 +8,7 @@ import Artist from 'pages/Artist';
 import Testimonials from 'pages/Testimonials'; 
 import Diamonds from 'pages/Diamonds'; 
 import UncutDiamonds from 'pages/UncutDiamonds'; 
-import Contact from 'pages/Contact'
+import Contact from 'pages/Contact';
 
 import {
   BrowserRouter, 

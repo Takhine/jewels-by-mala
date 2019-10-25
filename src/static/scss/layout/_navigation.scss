@@ -31,13 +31,14 @@
     letter-spacing: 1px;
     display: none;
     text-transform: capitalize;
+    white-space: nowrap;
     @include xl{
       transform: rotate(-90deg);
       position: absolute;
       color: white;
       right: 0;
       left: 0;
-      font-size: 24px;
+      font-size: 28px;
       top: 55%;
       display: block;
     }
@@ -151,12 +152,18 @@
   text-align: center;
   z-index: 2;
   font-size: 24px;
+  font-weight: 100;
+  li{
+    cursor: pointer;
+  }
   @include xl{
     display: flex;
     justify-content: flex-end;
     padding-right: 100px;
     top: 30%;
     position: relative;
+    font-size: xx-large;
+    right: 10%;
   }
   @media (orientation:landscape) and (max-height:600px) and (max-width:840px) {
     font-size: x-small;
@@ -181,9 +188,16 @@
     margin-bottom: 20px;
   }
   .social-container{
-    width: 70px;
+    width: 90px;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+    a{
+      cursor: pointer;
+      img{
+        width: 16px;
+      }
+    }
   }
 }
 

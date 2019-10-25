@@ -25,6 +25,9 @@
                 margin-bottom: 40px;
                 .seperate-title{
                     margin-left: 60px;
+                    p{
+                        margin-right: 85px;
+                    }
                 }
             }
         }
@@ -39,15 +42,18 @@
             }
             a{
                 color: $primary-brown;
-                border-bottom: 1px solid $primary-brown;
+                text-decoration: none;
                 text-transform: uppercase;
                 font-size: small;
                 transition: 0.4s;
                 padding-left: 0;
                 cursor: pointer;
+                p{
+                border-bottom: 1px solid $primary-brown;
                 &:hover{
                     transition: 0.4s;
                     padding-left: 7px;
+                }
                 }
             }
             .diamond-title{

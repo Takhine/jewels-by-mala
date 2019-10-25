@@ -37,6 +37,14 @@ function Layout(props) {
             setStateIn(true);
         } else {
             setStateIn(false);
+            if(props.history.location.pathname ==='/uncut-diamonds')
+            {
+                setSidebar('uncut diamonds');
+            }
+            else{
+                setSidebar(props.history.location.pathname.split('/').slice(-1)[0]);
+            }
+
         }
         switch (props.history.location.pathname) {
             case '/artist':
@@ -60,7 +68,6 @@ function Layout(props) {
 
     const closeNav = (page) => {
         setStateIn(false);
-        setSidebar(page);
         props.history.push(`/${page}`)
     }
 
@@ -76,7 +83,7 @@ function Layout(props) {
                         </div>
                         <div className="menu-items">
                             <List>
-                                <ListItem>
+                                <ListItem onClick={() => closeNav('about')}>
                                     <img src={mainLogo} className="logo-container" alt="Jewels by Mala" width={50}/>
                                 </ListItem>
                                 <ListItem onClick={() => closeNav('about')}>About</ListItem>
@@ -86,11 +93,18 @@ function Layout(props) {
                                 <ListItem onClick={() => closeNav('contact')}>Contact</ListItem>
                                 <ListItem>
                                     <div className="social-container">
+                                        <a>
                                         <img src={pinterest} alt="Pinterest" width={14} />
+                                        </a>
+                                        <a>
                                         <img src={facebook} alt="Facebook" width={14}/>
+                                        </a>
+                                        <a>
                                         <img src={instagram} alt="Instagram" width={14}/>
+                                        </a>
+                                        <a>
                                         <img src={twitter} alt="Twitter" width={14}/>
-
+                                        </a>
                                     </div>
                                 </ListItem>
                             </List>

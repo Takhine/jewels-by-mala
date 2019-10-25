@@ -1,3 +1,24 @@
+body{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-overflow-scrolling: none;
+    overflow-x: hidden;
+    scrollbar-base-color: silver;
+    scrollbar-arrow-color: #454545;
+    scrollbar-face-color: #454545;
+    scrollbar-3dlight-color: #16110e;
+    scrollbar-darkshadow-color: #16110e;
+    scrollbar-highlight-color: #16110e;
+    scrollbar-shadow-color: #16110e;
+    scrollbar-track-color: #16110e;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    padding-top: 0;
+}
 .container{
     @include xs{
         padding: 40px 16px 80px 16px;
