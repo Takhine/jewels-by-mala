@@ -13,8 +13,13 @@
         .diamonds-side{
             background-color: $secondary-black;
             color: $primary-white;
+            .diamonds-side-content{
+                letter-spacing: 2px;
+            }
             .collection-link{
                 margin-left: 140px;
+                letter-spacing: 1px;
+                font-size: 16px;
             }
         }
         }
@@ -27,6 +32,8 @@
                     margin-left: 60px;
                     p{
                         margin-right: 85px;
+                        letter-spacing: 1px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -57,7 +64,7 @@
                 }
             }
             .diamond-title{
-                margin-bottom: 10px;
+                margin-bottom: 25px;
             }
     }
 }

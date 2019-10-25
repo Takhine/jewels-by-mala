@@ -51,6 +51,17 @@ const UncutDiamonds = () => {
     return (
         <div className="uncut-diamonds">
             <Slider {...settings}>
+            <div className="slider-container">
+                    <img className="banner" src={bangles} alt="Jewels by Mala" width={width} height={height} />
+                    <div className="banner-content">
+                        <h2>Necklaces</h2>
+                        <div className="side-content">
+                            <h3>Black Label Masterpiece IX, 2016</h3>
+                            <p>Pear-shaped diamonds 12.06 cts, owl-shaped diamonds 93.04 cts <br/> round brilliant-cut diamonds 6.3 cts, diamonds 129.26 cts <br/> 24.7 x 18 x 10 cm</p>
+                        </div>
+
+                    </div>
+                </div>
                 <div className="slider-container">
                     <img className="banner" src={bangles} alt="Jewels by Mala" width={width} height={height} />
                     <div className="banner-content">
