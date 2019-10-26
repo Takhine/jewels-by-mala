@@ -28,6 +28,7 @@
   }
   .sidebar-title{
     font-weight: 100;
+    font-family: $baskerville-thin;
     letter-spacing: 1px;
     display: none;
     text-transform: capitalize;
@@ -38,7 +39,7 @@
       color: white;
       right: 0;
       left: 0;
-      font-size: 28px;
+      font-size: $large-font;
       top: 55%;
       display: block;
     }
