@@ -19,7 +19,8 @@
             .collection-link{
                 margin-left: 140px;
                 letter-spacing: 1px;
-                font-size: 16px;
+                font-size: $xsmall-font;
+                font-family: $gotham;
             }
         }
         }
@@ -33,7 +34,9 @@
                     p{
                         margin-right: 85px;
                         letter-spacing: 1px;
-                        font-size: 16px;
+                        font-size: $xsmall-font;
+                        font-family: $gotham;
+
                     }
                 }
             }
@@ -43,15 +46,15 @@
             justify-content: center;
             align-items: center;
             h2{
-                font-size: 50px;
+                font-size: $xxlarge-font;
                 font-weight: 200;
                 line-height: .8;
+                font-family: $baskerville-thin;
             }
             a{
                 color: $primary-brown;
                 text-decoration: none;
                 text-transform: uppercase;
-                font-size: small;
                 transition: 0.4s;
                 padding-left: 0;
                 cursor: pointer;
