@@ -59,7 +59,7 @@ const diamondsList = [
 
     },
     {
-        "title": "Earings",
+        "title": "Earrings",
         "img": earings,
         "subtitle": "Floral Petals Earings",
         "description": <p>FOUR SEASONS COLLECTION <br /> fancy-cut diamonds 14.21 cts, diamonds 53.28 cts</p>,
@@ -235,28 +235,6 @@ const Diamonds = () => {
                 })
 
                 }
-                {/* <div className="slider-container">
-                    <img className="banner" src={bangles} alt="Jewels by Mala" width={width} height={height} />
-                    <div className="banner-content">
-                        <h2>Bangles</h2>
-                        <div className="side-content">
-                            <h3>Ribbon Bangle &amp; Castle Bangle</h3>
-                            <p>Asscher-cut diamonds 5.27 cts, <br /> diamonds 35.58 cts</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div className="slider-container">
-                    <img className="banner" src={earings} alt="Jewels by Mala" width={width} height={height} />
-                    <div className="banner-content left">
-                        <h2>Earings</h2>
-                        <div className="side-content">
-                            <h3>Floral Petals Earrings</h3>
-                            <p>Four Seasons Collection, <br /> Fancy-cut diamonds 14.21 cts, diamonds 53.28 cts</p>
-                        </div>
-
-                    </div>
-                </div> */}
             </Slider>
         
             <div className="small-slider-container">
