@@ -257,9 +257,7 @@ const Diamonds = () => {
                     </div>
                 </div> */}
             </Slider>
-            
-            <pre>{}</pre>
-
+        
             <div className="small-slider-container">
                 <Slider {...smallSettings}>
                     {diamondsList[slide].carousel.map((item)=>{
