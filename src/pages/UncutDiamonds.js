@@ -8,6 +8,8 @@ import useWindowDimensions from '../components/windowDimension';
 // Images
 import bangles from '../static/images/backgrounds/uncut-bangles-background.jpg';
 import earings from '../static/images/backgrounds/uncut-earings-background.jpg';
+import necklaces from '../static/images/backgrounds/uncut-necklaces-background.jpg';
+
 
 
 function LeftNavButton(props) {
@@ -52,7 +54,7 @@ const UncutDiamonds = () => {
         <div className="uncut-diamonds">
             <Slider {...settings}>
             <div className="slider-container">
-                    <img className="banner" src={bangles} alt="Jewels by Mala" width={width} height={height} />
+                    <img className="banner" src={necklaces} alt="Jewels by Mala" width={width} height={height} />
                     <div className="banner-content">
                         <h2>Necklaces</h2>
                         <div className="side-content">
