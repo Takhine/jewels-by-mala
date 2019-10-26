@@ -71,12 +71,14 @@
     opacity: 0.6;
     position: absolute;
     z-index: -1;
-    top:0;
+    top: 70px;
     @include msm{
       transform: translate3d(-80px, 60px, 0px)
     }
     @include xl{
       opacity: 1;
+      top:-70px;
+
     }
   }
   .main-title{
@@ -86,11 +88,13 @@
     left: 0;
     right: 0;
     text-align: center;
+    margin-bottom: 60px;
     @include xl{
       left: 160px;
       top: 50%;
       position: absolute;
       text-align: left;
+      margin-bottom: 0;
     }
     @include rwd(1200,1400){
       left: 40px;
@@ -151,7 +155,7 @@
 .menu-items{
   text-align: center;
   z-index: 2;
-  font-size: 24px;
+  font-size: $large-font;
   font-weight: 100;
   li{
     cursor: pointer;
@@ -161,7 +165,7 @@
     justify-content: flex-end;
     top: 30%;
     position: relative;
-    font-size: xx-large;
+    font-size: $large-font;
     right: 10%;
   }
   @include rwd(1200,1400){
@@ -177,7 +181,7 @@
     margin: auto;
   }
   @media (min-height:1024px) and (max-width:1024px) {
-    font-size: 32px;
+    font-size: $xxlarge-font;
   }
   .MuiListItem-root{
     justify-content: center;
@@ -208,12 +212,13 @@
   position: absolute;
   text-align: center;
   font-size: 12px;
-  word-spacing: 2px;
   z-index: 1;
   left: 0;
   top: 90%;
   display: none;
+  font-family: $baskerville-thin;
   color: $primary-grey;
+  letter-spacing: 1px;
   @include xl{
     font-size: 14px;
     width: auto;
@@ -225,6 +230,11 @@
   }
   @include rwd(1200,1400){
     left: 40px;
+  }
+  p{
+    margin-top: 50px;
+    color: #adaeaf;
+    font-weight: 100;
   }
 }
        

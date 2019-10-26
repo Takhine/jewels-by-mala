@@ -9,6 +9,9 @@
         }
         .large-slider-container{
             position: relative;
+            @include rwd(300,599){
+                margin-bottom: 40px;
+            }
             @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
                 height: 100% !important;
                 }    
@@ -22,9 +25,104 @@
         }
         .small-slider-container{
             margin-top: 40px;
-            padding: 20px 40px;
+            padding: 20px 60px;
+            @include rwd(600,700){
+                padding: 20px 80px;
+            }
+            @include rwd(701,768){
+                margin-top: 40px;
+                padding: 20px 180px;
+            }
+            @include rwd(769,850){
+                padding-left: 80px;
+            }
+            @include rwd(851,960){
+                margin-top: 40px;
+                padding: 20px 40px;
+                padding-left: 120px;
+            }
+            @include rwd(960,1199){
+                margin-top: 40px;
+                padding: 20px 80px;
+                padding-left: 110px;
+            }
+            @include rwd(1200,1399){
+                margin-top: 40px;
+                padding: 20px 100px;
+                padding-left: 100px;
+            }
+            @include rwd(1400,1600){
+                margin-top: 40px;
+                padding: 20px 160px;
+                padding-left: 200px;
+            }
+            @include rwd(1601,2600){
+                margin-top: 40px;
+                padding: 20px 200px;
+                padding-left: 300px;
+            }
             .slick-list{
                 height: 100%;
+            }
+            .left-arrow,.right-arrow{
+                position: absolute;
+                top: 30%;
+                width: 40px;
+                z-index: 2;
+                &:hover{
+                    cursor: pointer;
+                }
+                img{
+                    width: 15px;
+                }
+            }
+            .left-arrow{
+                @include xs{
+                    left: -25px;
+                }
+                @include msm{
+                    left: -40px;
+                }
+                @include rwd(700,768){
+                    left: -25px;
+
+                }
+               
+            }
+            .right-arrow{
+                @include xs{
+                    right: -50px;
+                }
+            }
+            .small-slider{
+                img{
+                    width: 200px;
+                    margin: auto;
+                    @include rwd(300,600){
+                        margin: auto;
+                    }
+                    @include rwd(600,700){
+                        width: 250px;
+                    }
+                    @include rwd(701,768){
+                        width: 400px;
+                    }
+                    @include rwd(769,961){
+                        width: 300px;
+                    }
+                    @include rwd(961,1199){
+                        width: 250px;
+                    }
+                    @include rwd(1200,1800){
+                        width: 300px;
+                    }
+                    @include rwd(1800,2500){
+                        width: 400px;
+                    }
+                }
+                .small-slider-content{
+                    text-align: center;
+                }
             }
         }
         .slick-right-arrow{
@@ -33,7 +131,7 @@
             height: 60px;
             text-transform: uppercase;
             position:fixed;
-            z-index: 1;
+            z-index: 3;
             top: 50%;
             right: 0;
             justify-content: center;
@@ -43,11 +141,9 @@
             font-size: x-small;
             cursor: pointer;
         }
-        .left-arrow{
-            left: 0;
-        }
+        
         .banner{
-            @media (orientation:landscape) and (max-width: 767px) and (min-height:321px){
+            @media (orientation:landscape) and (max-width: 767px) and (min-height:450px){
                 padding-top: 70px;
             }
             @media (min-width:300px) and (max-width:599px) and (orientation:portrait){

@@ -178,7 +178,7 @@ const Diamonds = () => {
               breakpoint: 960,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 initialSlide: 2
               }
             },
@@ -188,7 +188,21 @@ const Diamonds = () => {
                 slidesToShow: 1,
                 slidesToScroll: 1
               }
-            }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
           ]
     };
 
@@ -251,7 +265,7 @@ const Diamonds = () => {
                     {diamondsList[slide].carousel.map((item)=>{
                         return(
                             <div key={item.imgTitle} className="small-slider">
-                                <img src={item.img} alt={item.imgTitle} width="300px"/>
+                                <img src={item.img} alt={item.imgTitle}/>
                                 <div className="small-slider-content">
                                     <h2>{item.imgTitle}</h2>
                                     <p>{item.imgDesc}</p>

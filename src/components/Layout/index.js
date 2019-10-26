@@ -114,7 +114,7 @@ function Layout(props) {
                             </List>
                         </div>
                         <div className="main-copyright" style={{width:width, height:height}}>
-                            <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created by Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
+                            <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created By Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
                         </div>
                         <img id="background" src={mainBackground} width={width} />
                     </div>

@@ -4,12 +4,14 @@
 @import './utilities/colors';
 @import './utilities/mixins';
 
-@import './layout/page';
-@import './layout/navigation';
-@import './layout/footer';
+
 
 
 @import './base/base';
+
+@import './layout/page';
+@import './layout/navigation';
+@import './layout/footer';
 
 @import './pages/about';
 @import './pages/artist';

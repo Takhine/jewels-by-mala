@@ -1,5 +1,17 @@
+
+// Bodoni Italic
+@import url('https://www.fontify.me/wf/5e15019a30e184c2244e2c2e217bc447');
+// Baskerville
+@import url('https://www.fontify.me/wf/f3b549c6fe1610a0a5d0a5f9e9c15178');
+// Gotham Book
+@import url('https://www.fontify.me/wf/60612a5e8492b30607d48d60adf0f478');
+
+// Baskerville thin
+@import url('https://www.fontify.me/wf/75e6a2199ea22d889799453400779d70');
+
 body{
     -webkit-font-smoothing: antialiased;
+    font-family: $baskerville;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-backface-visibility: hidden;
