@@ -122,6 +122,12 @@
                 }
                 .small-slider-content{
                     text-align: center;
+                    padding-top: 20px;
+                    h2,p{
+                        font-size: $regular-font;
+                        font-family: $gotham;
+                        font-weight: 100;
+                    }
                 }
             }
         }
@@ -179,7 +185,7 @@
             @include rwd(1440,3000){
                 right: 20%;
             }
-            @media (orientation:landscape) and (max-width: 767px){
+            @media (orientation:landscape) and (max-width: 825px){
                 background: rgba(0,0,0,0.6);
                 border-radius: 4px;
                 padding: 12px;
@@ -221,19 +227,21 @@
             left: 0;
             }
         }
+        .right{
+            right: 5%;
+            bottom: 10%;
+        }
         .quote-container{
             display: flex;
             justify-content: center;
             background-color: $secondary-black;
             color: $primary-white;
             padding: 60px 0 40px;
-            font-size: 12px;
             @include xl{
                 padding:80px 80px;
                 padding-left: 40px;
             }
             .quote{
-                font-weight: 200;
                 letter-spacing: 1px;
                 @include md{
                     margin: 0 50px;
@@ -243,7 +251,15 @@
         
                 }
                 @include xl{
-                    margin: 0 140px;
+                    margin: 0 200px;
+                }
+                h3{
+                    font-size: $regular-font;
+                    font-family: $bodoni-thin;
+                    font-weight: 100;
+                    @include xl{
+                        font-size: $large-font;
+                    }
                 }
             }
         }

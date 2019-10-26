@@ -147,6 +147,7 @@ const Diamonds = () => {
         infinite: true,
         speed: 500,
         fade: true,
+        draggable:false,
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: <LeftNavButton />,
