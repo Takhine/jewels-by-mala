@@ -92,7 +92,7 @@ function Layout(props) {
                                 </ListItem>
                                 <ListItem onClick={() => closeNav('about')}>About</ListItem>
                                 <ListItem onClick={() => closeNav('artist')}>Artist</ListItem>
-                                <ListItem onClick={() => closeNav('collection')}>Collections</ListItem>
+                                <ListItem onClick={() => closeNav('collection')}>Collection</ListItem>
                                 <ListItem onClick={() => closeNav('testimonials')}>Testimonials</ListItem>
                                 <ListItem onClick={() => closeNav('contact')}>Contact</ListItem>
                                 <ListItem>
