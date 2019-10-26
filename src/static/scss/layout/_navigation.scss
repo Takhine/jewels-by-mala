@@ -44,6 +44,27 @@
       display: block;
     }
   }
+  .sidebar-logo{
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+  .desktop{
+    display: none;
+    @include xl{
+      display: block;
+    }
+  }
+  .mobile{
+    display: block;
+    @include xl{
+      display: none;
+    }
+  }
 }
 #navigation-menu {
   background-color: black;

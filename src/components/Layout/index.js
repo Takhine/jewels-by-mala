@@ -14,6 +14,7 @@ import mainBackground from '../../static/images/backgrounds/main-background.png'
 import mainTitle from '../../static/images/main-title.png';
 import mainLogo from '../../static/images/main-logo.png';
 import navLogo from '../../static/images/nav-logo.png';
+import mobileLogo from '../../static/images/mobile-brown-title.png'
 
 import pinterest from '../../static/images/icons/pinterest-icon-main.png';
 import facebook from '../../static/images/icons/facebook-icon-main.png';
@@ -129,7 +130,9 @@ function Layout(props) {
                 <img src={navLogo} alt="Jewels by Mala"/>
 
                 </div>
-                <p className="sidebar-title">{sidebarName}</p>
+                <p className="sidebar-title desktop">{sidebarName}</p>
+                <img className="sidebar-logo mobile" src={mobileLogo} alt="Jewels by Mala" />
+
             </div>
 
 
