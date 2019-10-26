@@ -41,6 +41,12 @@
                     color: $primary-white;
                     h2{
                         font-size: medium;
+                        font-family: $baskerville-thin;
+                        margin-bottom: $title-font;
+                    }
+                    p{
+                        font-family: $gotham;
+                        font-size: $small-font;
                     }
                     @include msm{
                         padding-left: 60px;

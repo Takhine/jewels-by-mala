@@ -16,17 +16,18 @@
             background-color: $secondary-black;
             color: $primary-white;
             padding: 60px 0 40px;
-            font-size: 12px;
+            font-size: $xsmall-font;
             @include rwd (300, 370){
-                font-size: 10px;
+                font-size: $xxsmall-font;
             }
             @include msm{
                 font-size: $regular-font;
             }
             @include mmd{
-                font-size: larger;
+                font-size: $xlarge-font;
             }
             .quote{
+                font-family: $baskerville-thin;
                 h2{
                     font-weight: 200;
                     letter-spacing: 1px;
@@ -43,6 +44,7 @@
                 }
                 & h2:last-child{
                     font-style: italic;
+                    font-family: $bodoni-italic;
                 }
             }
         }
@@ -54,6 +56,7 @@
         }
         .promise-container{
             @extend .quote-container;
+            padding: 80px 0 60px;
             background-color: $primary-brown;       
             .promise{
                 text-align: center;
@@ -61,12 +64,12 @@
                 h2{
                     font-weight: 200;
                     letter-spacing: 1px;
-                    font-size: 14px;
+                    font-size: $small-font;
                     @include msm{
-                        font-size: 25px;
+                        font-size: $large-font;
                     }
                     @include md{
-                        font-size: 35px;
+                        font-size: $xlarge-font;
                     }
                 }
             }

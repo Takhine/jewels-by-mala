@@ -1,3 +1,45 @@
+
+// Bodoni Italic
+@import url('https://www.fontify.me/wf/5e15019a30e184c2244e2c2e217bc447');
+// Bodoni thin
+@import url('https://www.fontify.me/wf/5912eacb785640636fe6ad4ba885135b');
+
+// Baskerville
+@import url('https://www.fontify.me/wf/f3b549c6fe1610a0a5d0a5f9e9c15178');
+// Gotham Book
+@import url('https://www.fontify.me/wf/60612a5e8492b30607d48d60adf0f478');
+
+// Baskerville thin
+@import url('https://www.fontify.me/wf/75e6a2199ea22d889799453400779d70');
+
+@font-face{
+font-family: "Bodoni Italic";
+src: url('../../fonts/BOD_I_0.TTF') format('ttf');
+font-weight: 100;
+font-style: italic;
+}
+body{
+    -webkit-font-smoothing: antialiased;
+    font-family: $baskerville;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-overflow-scrolling: none;
+    overflow-x: hidden;
+    scrollbar-base-color: silver;
+    scrollbar-arrow-color: #454545;
+    scrollbar-face-color: #454545;
+    scrollbar-3dlight-color: #16110e;
+    scrollbar-darkshadow-color: #16110e;
+    scrollbar-highlight-color: #16110e;
+    scrollbar-shadow-color: #16110e;
+    scrollbar-track-color: #16110e;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    padding-top: 0;
+}
 .container{
     @include xs{
         padding: 40px 16px 80px 16px;

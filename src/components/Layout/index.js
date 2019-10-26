@@ -37,6 +37,14 @@ function Layout(props) {
             setStateIn(true);
         } else {
             setStateIn(false);
+            if(props.history.location.pathname ==='/uncut-diamonds')
+            {
+                setSidebar('uncut diamonds');
+            }
+            else{
+                setSidebar(props.history.location.pathname.split('/').slice(-1)[0]);
+            }
+
         }
         switch (props.history.location.pathname) {
             case '/artist':
@@ -56,12 +64,15 @@ function Layout(props) {
 
     const openNav = () => {
         setStateIn(true);
+        setFooterIn(false);
+
     }
 
     const closeNav = (page) => {
         setStateIn(false);
-        setSidebar(page);
+
         props.history.push(`/${page}`)
+
     }
 
     return (
@@ -76,27 +87,34 @@ function Layout(props) {
                         </div>
                         <div className="menu-items">
                             <List>
-                                <ListItem>
+                                <ListItem onClick={() => closeNav('about')}>
                                     <img src={mainLogo} className="logo-container" alt="Jewels by Mala" width={50}/>
                                 </ListItem>
                                 <ListItem onClick={() => closeNav('about')}>About</ListItem>
                                 <ListItem onClick={() => closeNav('artist')}>Artist</ListItem>
-                                <ListItem onClick={() => closeNav('collection')}>Collections</ListItem>
+                                <ListItem onClick={() => closeNav('collection')}>Collection</ListItem>
                                 <ListItem onClick={() => closeNav('testimonials')}>Testimonials</ListItem>
                                 <ListItem onClick={() => closeNav('contact')}>Contact</ListItem>
                                 <ListItem>
                                     <div className="social-container">
+                                        <a>
                                         <img src={pinterest} alt="Pinterest" width={14} />
+                                        </a>
+                                        <a>
                                         <img src={facebook} alt="Facebook" width={14}/>
+                                        </a>
+                                        <a>
                                         <img src={instagram} alt="Instagram" width={14}/>
+                                        </a>
+                                        <a>
                                         <img src={twitter} alt="Twitter" width={14}/>
-
+                                        </a>
                                     </div>
                                 </ListItem>
                             </List>
                         </div>
                         <div className="main-copyright" style={{width:width, height:height}}>
-                            <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created by Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
+                            <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created By Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
                         </div>
                         <img id="background" src={mainBackground} width={width} />
                     </div>

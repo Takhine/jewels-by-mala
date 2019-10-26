@@ -1,6 +1,7 @@
 import React from 'react'; 
 import {Grid} from '@material-ui/core';
 
+import {NavLink} from 'react-router-dom';
  const Collection=()=> {
     return (
         <div className="collection-container">
@@ -8,7 +9,9 @@ import {Grid} from '@material-ui/core';
                 <Grid className="diamonds-side" item xs={12} sm={6}>
                     <div className="diamonds-side-content">
                         <h2 className="diamond-title">Diamonds</h2>
-                        <a className="collection-link">View Collection</a>
+                        <NavLink exact to="/diamonds">
+                        <p className="collection-link">View Collection</p>
+                        </NavLink>
                     </div> 
                 </Grid>
                 <Grid className="uncut-side" item xs={12} sm={6}>
@@ -16,7 +19,9 @@ import {Grid} from '@material-ui/core';
                         <h2>Uncut</h2>
                         <div className="seperate-title">
                         <h2 className="diamond-title">Diamonds</h2>
-                        <a className="collection-link">View Collection</a>
+                        <NavLink exact to="/uncut-diamonds">
+                        <p className="collection-link">View Collection</p>
+                        </NavLink>
                         </div>
                     </div> 
                 </Grid>

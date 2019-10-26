@@ -20,8 +20,9 @@
             padding-top: 120px;
             .slider-text-container{
                 color: $primary-brown;
+                font-family:    $baskerville-thin ;
                 @include xl{
-                    font-size: 25px;
+                    font-size: $large-font;
                 }
                 .person{
                     margin-top: 40px;

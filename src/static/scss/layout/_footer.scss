@@ -5,25 +5,30 @@
     left: 0;
     right: 0;
     @include xl{
-        padding:40px 80px;
-        padding-left: 40px;
+        padding:40px 100px;
+        padding-left: 100px;
     }
     .footer-list{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         @include rwd(300,600){
-            font-size: 10px;
+            font-size: $xxsmall-font;
         }
         @include msm{
-            font-size: 14px;
+            font-size: $small-font;
+        }
+        @include md{
+            margin: 0 50px;
         }
         @include mmd{
-            font-size: 16px;
+            font-size: $regular-font;
+            margin: 0 100px;
+
         }
         @include xl{
-            margin: 0 40px;
-            font-size: 18px;
+            margin: 0 140px;
+            font-size: $title-font;
         }
         a{
             text-decoration: none;
@@ -31,7 +36,7 @@
         }
         .MuiListItem-root{
             width: auto;
-            color: $primary-grey;            
+            color: #928d8d;            
         }
         .MuiListItem-gutters{
             padding-right: 8px;
@@ -39,51 +44,52 @@
         }
     }
     hr{
-        color: $primary-grey;
+        color: #928d8d;
         border-style: solid;
             height: 0px;
             border-bottom: 0;
             border-right: 0;
             border-left: 0;
-            padding-bottom: 16px;
-            @include rwd(760,959){
-                margin: 0 40px;
+            padding-bottom: $regular-font;
+            @include md{
+                margin: 0 50px;
             }
             @include rwd(960,1199){
-                margin: 0 60px;
+                margin: 10px 100px;
             }
             @include xl{
-                margin: 0 90px;
+                margin: 15px 140px;
             }
     }
     .copyright{
-        color: $primary-grey;
+        color: #928d8d;
         display: flex;
         justify-content: space-between;
-        font-size: 10px;
+        font-size: $xxsmall-font;
         @include rwd(300,600){
             flex-direction: column-reverse;
             align-items: center;
             text-align: center;
         }
-        @include rwd(760,959){
-            margin: 0 45px;
+        @include md{
+            margin: 0 50px;
         }
         @include rwd(960,1199){
-            margin: 0 65px;
+            margin: 0 100px;
         }
         @include xl{
-            margin: 0 95px;
+            margin: 0 140px;
+            font-size: $xxsmall-font;
         }
         .social-container{
-            width: 100px;
+            width: 110px;
             display: flex;
             justify-content: space-between;
             @include rwd(300,600){
                margin-bottom: 16px;
             }
             img{
-                width: 15px;
+                width: 18px;
             }
         }
     }
