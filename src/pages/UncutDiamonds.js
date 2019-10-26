@@ -55,7 +55,7 @@ const UncutDiamonds = () => {
             <Slider {...settings}>
             <div className="slider-container">
                     <img className="banner" src={necklaces} alt="Jewels by Mala" width={width} height={height} />
-                    <div className="banner-content">
+                    <div className="banner-content right-necklace">
                         <h2>Necklaces</h2>
                         <div className="side-content">
                             <h3>Black Label Masterpiece IX, 2016</h3>
