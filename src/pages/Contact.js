@@ -112,7 +112,7 @@ const Contact = () => {
                             />
                         </FormGroup>
                     </FormControl>
-                    <Button>Send</Button>
+                    <Button><b>Send</b></Button>
                 </div>
             </div>
         </div>

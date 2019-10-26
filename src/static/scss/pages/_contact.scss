@@ -18,9 +18,7 @@
         padding: 40px 16px;
         h2{
             font-weight: 200;
-            @include xl{
-                font-size: 50px;
-            }
+
             @include mmd{
                 font-size: 38px;
             }
@@ -47,9 +45,14 @@
                     text-transform: uppercase;
                     .MuiFormLabel-root{
                         text-transform: uppercase;
+                        color: $primary-black;
                     }
                     .MuiInputBase-input{
                         text-transform: uppercase;
+                        &::placeholder{
+                            color: $primary-black;
+                            opacity: 1;
+                        }
 
                     }
                     .MuiFormLabel-root.Mui-focused{
@@ -81,7 +84,7 @@
                 border-bottom: 1px solid $primary-black;
             }
             .MuiTypography-root{
-                font-size: 12px;
+                font-size: $xsmall-font;
             }
             .MuiCheckbox-colorPrimary.Mui-checked{
                 color: $primary-black;
