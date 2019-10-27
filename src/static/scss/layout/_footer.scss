@@ -4,6 +4,9 @@
     position: absolute;
     left: 0;
     right: 0;
+    @include xs{
+        padding: 40px 16px 40px 16px;
+    }
     @include xl{
         padding:40px 100px;
         padding-left: 100px;

@@ -7,10 +7,22 @@
             padding-left: 70px;
             padding-top: 0;
         }
+        .desktop-version{
+            display: none;
+            @include msm{
+                display: flex;
+            }
+        }
+        .mobile-version{
+            display: flex;
+            @include msm{
+                display: none;
+            }
+        }
         .large-slider-container{
             position: relative;
             @include rwd(300,599){
-                margin-bottom: 40px;
+                margin-bottom: 0;
             }
             @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
                 height: 100% !important;
@@ -24,40 +36,37 @@
             
         }
         .small-slider-container{
-            margin-top: 40px;
+            margin-top: 0;
             padding: 20px 60px;
+            @include msm{
+                margin-top: 40px;
+            }
             @include rwd(600,700){
                 padding: 20px 80px;
             }
             @include rwd(701,768){
-                margin-top: 40px;
                 padding: 20px 180px;
             }
             @include rwd(769,850){
                 padding-left: 80px;
             }
             @include rwd(851,960){
-                margin-top: 40px;
                 padding: 20px 40px;
                 padding-left: 120px;
             }
             @include rwd(960,1199){
-                margin-top: 40px;
                 padding: 20px 80px;
                 padding-left: 110px;
             }
             @include rwd(1200,1399){
-                margin-top: 40px;
                 padding: 20px 100px;
                 padding-left: 100px;
             }
             @include rwd(1400,1600){
-                margin-top: 40px;
                 padding: 20px 160px;
                 padding-left: 200px;
             }
             @include rwd(1601,2600){
-                margin-top: 40px;
                 padding: 20px 200px;
                 padding-left: 300px;
             }
@@ -69,6 +78,9 @@
                 top: 30%;
                 width: 40px;
                 z-index: 2;
+                @include md{
+                    top: 40%;
+                }
                 &:hover{
                     cursor: pointer;
                 }
@@ -101,9 +113,7 @@
                     @include rwd(300,600){
                         margin: auto;
                     }
-                    @include rwd(600,700){
-                        width: 250px;
-                    }
+
                     @include rwd(701,768){
                         width: 400px;
                     }
@@ -165,16 +175,16 @@
                 position: relative;
                 text-align: center;
                 margin-top: 40px;
-                color: black;
-                font-size: smaller;
-                margin-top: 40px;
+                margin-bottom: 40px;
+                color: $primary-black;
+                font-size: $xsmall-font;
                 padding: 0 16px;
                 
             }
             @include rwd(600,959){
                 right: 2%;
                 bottom: 2%;
-                font-size: smaller;
+                font-size: $xsmall-font;
             }
             @include rwd(960,1199){
                 right: 5%;
@@ -222,17 +232,24 @@
             @extend .banner-content;
             right: 0;
             left: 10%;
+            @media (max-width: 768px) and (min-height:500px){
+                bottom: 0%;
+            }
+            @include md{
             bottom: 40%;
+
+            }
             @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
             left: 0;
             }
         }
-        .right{
-            right: 5%;
-            bottom: 10%;
+        .right{  
+            @include msm{
+                right: 5%;
+                bottom: 10%;
+            }
         }
         .quote-container{
-            display: flex;
             justify-content: center;
             background-color: $secondary-black;
             color: $primary-white;
@@ -257,6 +274,7 @@
                     font-size: $regular-font;
                     font-family: $bodoni-thin;
                     font-weight: 100;
+                    text-align: center;
                     @include xl{
                         font-size: $large-font;
                     }

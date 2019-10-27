@@ -24,7 +24,7 @@
                 z-index: -1;
                 height: 100vh;
                 width: 100%;
-                @include xl{
+                @include md{
                     width: 50%;
                 }
             }
@@ -32,13 +32,14 @@
                 height: 100%;
                 width: 100%;
                 padding-top: 80px;
-                @include xl{
+                @include md{
                     height: 100%;
                     width: 50%;
                 }
                 
                 .about-text{
                     color: $primary-white;
+                    padding: 32px 0;
                     h2{
                         font-size: medium;
                         font-family: $baskerville-thin;
@@ -48,9 +49,8 @@
                         font-family: $gotham;
                         font-size: $small-font;
                     }
-                    @include msm{
-                        padding-left: 60px;
-                        padding-right: 80px;
+                    @include md{
+                        padding: 0 20px 0 20px;
                     }
                 }
             } 

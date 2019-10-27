@@ -45,7 +45,7 @@ const diamondsList = [
         "subtitle": "Black Label Masterpiece IX, 2016",
         "description": <p>Pear-shaped diamonds 12.06 cts, owl-shaped diamonds 93.04 cts <br /> round brilliant-cut diamonds 6.3 cts, diamonds 129.26 cts <br /> 24.7 x 18 x 10 cm</p>,
         "styles": "banner-content right",
-        "sellerDesc": "We pride ourselves on creating elegant jewelry for the accomplished woman, whose sophisticated brilliance is only enhanced by that of her diamond. Each necklace begins with a moment of inspiration, transforming our diamonds into covetable designs. From the purity of a diamond solitaire necklace to the glamour of multi-layered diamonds working in harmony. Our necklaces are  designed to be worn and admired.",
+        "sellerDesc": "We pride ourselves on creating elegant jewelry for the accomplished woman, whose sophisticated brilliance is only enhanced by that of her diamond. Each necklace begins with a moment of inspiration, transforming our diamonds into covetable designs. ",
         "carousel":[
             {
                 "img":necklace1,
@@ -311,7 +311,7 @@ const Diamonds = () => {
 
     return (
         <div className="diamonds">
-            <Slider {...settings}>
+            <Slider className="slick-slider-mobile" {...settings}>
                 {diamondsList.map((diamond) => {
                     return (
                         <div key={diamond.title}>
@@ -324,9 +324,14 @@ const Diamonds = () => {
                                     <div>{diamond.description}</div>
                                 </div>
                             </div>
+                            <div className="quote-container mobile-version">
+                                <div className="quote">
+                                    <h3>{diamond.sellerDesc}</h3>
+                                </div>
+                            </div>
                             </div>
                             
-                            <div className="quote-container">
+                            <div className="quote-container desktop-version">
                                 <div className="quote">
                                     <h3>{diamond.sellerDesc}</h3>
                                 </div>

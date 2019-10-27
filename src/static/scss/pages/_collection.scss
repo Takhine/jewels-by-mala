@@ -17,10 +17,26 @@
                 letter-spacing: 2px;
             }
             .collection-link{
-                margin-left: 140px;
                 letter-spacing: 1px;
                 font-size: $xsmall-font;
                 font-family: $gotham;
+                @include xs{
+                margin-left: 45px;
+                }
+                @include msm{
+                    margin-left: 140px;
+                    }
+            }
+            hr{
+                border-width: .9px;
+                @include xs{
+                    margin-left: 45px;
+                    margin-right: 60px;
+                    }
+                    @include msm{
+                        margin-left: 140px;
+                        margin-right: 0;
+                        }
             }
         }
         }
@@ -36,7 +52,10 @@
                         letter-spacing: 1px;
                         font-size: $xsmall-font;
                         font-family: $gotham;
-
+                    }
+                    hr{
+                        margin-right: 87px;
+                        border-width: .9px;
                     }
                 }
             }
@@ -59,11 +78,11 @@
                 padding-left: 0;
                 cursor: pointer;
                 p{
-                border-bottom: 1px solid $primary-brown;
-                &:hover{
-                    transition: 0.4s;
-                    padding-left: 7px;
-                }
+                // border-bottom: 1px solid $primary-brown;
+                // &:hover{
+                //     transition: 0.4s;
+                //     padding-left: 7px;
+                // }
                 }
             }
             .diamond-title{

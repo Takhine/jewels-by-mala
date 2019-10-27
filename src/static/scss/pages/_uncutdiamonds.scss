@@ -111,13 +111,18 @@
         @extend .banner-content;
         right: 0;
         left: 10%;
-        bottom: 40%;
+        @include msm{
+            bottom: 40%;
+
+        }
         @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
         left: 0;
         }
     }
     .right-necklace{
-        bottom: 10%;
-        right: 5%;
+        @include msm{
+            bottom: 10%;
+            right: 5%;
+        }
     }
 }

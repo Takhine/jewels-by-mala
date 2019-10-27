@@ -12,12 +12,7 @@
 // Baskerville thin
 @import url('https://www.fontify.me/wf/75e6a2199ea22d889799453400779d70');
 
-@font-face{
-font-family: "Bodoni Italic";
-src: url('../../fonts/BOD_I_0.TTF') format('ttf');
-font-weight: 100;
-font-style: italic;
-}
+
 body{
     -webkit-font-smoothing: antialiased;
     font-family: $baskerville;
