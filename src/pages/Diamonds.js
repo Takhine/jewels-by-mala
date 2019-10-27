@@ -5,11 +5,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import useWindowDimensions from '../components/windowDimension';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 // Images
 import leftArrow from '../static/images/icons/left-arrow.png';
 import rightArrow from '../static/images/icons/right-arrow.png';
-
-
 
 import necklace from 'static/images/backgrounds/diamond-necklaces-background.jpg';
 import necklace1 from 'static/images/diamond/d-necklace-1.jpg';
@@ -224,7 +224,10 @@ function LeftCarousel(props) {
             style={{ ...style, display:'block'}}
             onClick={onClick}
         >
-            <img src={leftArrow} alt="arrow_left" />
+            <LazyLoadImage
+                src={leftArrow}
+                alt="arrow_left"
+            />
         </div>
     );
 }
@@ -236,7 +239,10 @@ function RightCarousel(props) {
             style={{ ...style, display: 'block' }}
             onClick={onClick}
         >
-            <img src={rightArrow} alt="arrow_right" />
+            <LazyLoadImage
+                src={rightArrow}
+                alt="arrow_right"
+            />
         </div>
     );
 }
@@ -316,7 +322,13 @@ const Diamonds = () => {
                     return (
                         <div key={diamond.title}>
                             <div className="large-slider-container" style={{height:height}}>
-                            <img className="banner" src={diamond.img} alt={diamond.title} width={width} height={height} />
+                            <LazyLoadImage
+                                className="banner"
+                                src={diamond.img}
+                                alt={diamond.title}
+                                width={width}
+                                height={height}
+                            />
                             <div className={`${diamond.styles}`}>
                                 <h2>{diamond.title}</h2>
                                 <div className="side-content">
@@ -349,7 +361,10 @@ const Diamonds = () => {
                     {diamondsList[slide].carousel.map((item)=>{
                         return(
                             <div key={item.imgTitle} className="small-slider">
-                                <img src={item.img} alt={item.imgTitle}/>
+                                <LazyLoadImage
+                                    src={item.img}
+                                    alt={item.imgTitle}
+                                />
                                 <div className="small-slider-content">
                                     <h2>{item.imgTitle}</h2>
                                     <p>{item.imgDesc}</p>

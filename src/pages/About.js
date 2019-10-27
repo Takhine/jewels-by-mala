@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import about from '../static/images/backgrounds/about-background.png';
 import {Grid} from '@material-ui/core';
 import useWindowDimensions from '../components/windowDimension';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function About() {
     const { height, width } = useWindowDimensions();
@@ -9,7 +10,12 @@ export default function About() {
     return (
         <React.Fragment>
             <div className="about">
-                <img className="banner" src={about} width="100%"/>
+                <LazyLoadImage
+                    src={about}
+                    width="100%"
+                    className="banner"
+                />
+                  
                 <div className="container about-text-container">
                 <div className="overlay">
                         </div>
