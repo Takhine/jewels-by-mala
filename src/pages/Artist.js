@@ -3,13 +3,18 @@ import React from 'react';
 import {Grid} from '@material-ui/core';
 
 import artist from '../static/images/backgrounds/artist-image.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
  const Artist=()=> {
     return (
         <React.Fragment>
             <div className="artist">
                 <div className="artist-banner">
-                <img src={artist} className="banner" width='100%' />
+                    <LazyLoadImage 
+                        src={artist}
+                        className="banner"
+                        width="100%"
+                    />
                 </div>
                 <div className="artist-content">
                     <div className="quote-container">
