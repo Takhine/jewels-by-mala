@@ -56,20 +56,20 @@ function Layout(props) {
             }
 
         }
-        switch (props.history.location.pathname) {
-            case '/artist':
-                setFooterIn(true);
-                break;
-            case '/collection':
-                setFooterIn(true);
-                break;
-            case '/diamonds':
-                setFooterIn(true);
-                break;
-            default:
-                setFooterIn(false);
-                break;
-        }
+        // switch (props.history.location.pathname) {
+        //     case '/artist':
+        //         setFooterIn(true);
+        //         break;
+        //     case '/collection':
+        //         setFooterIn(true);
+        //         break;
+        //     case '/diamonds':
+        //         setFooterIn(true);
+        //         break;
+        //     default:
+        //         setFooterIn(true);
+        //         break;
+        // }
     }, [props.history.location.key])
 
     const openNav = () => {
@@ -80,7 +80,7 @@ function Layout(props) {
 
     const closeNav = (page) => {
         setStateIn(false);
-
+        setFooterIn(true);
         props.history.push(`/${page}`)
 
     }

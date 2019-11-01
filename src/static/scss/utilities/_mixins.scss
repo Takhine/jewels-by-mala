@@ -37,6 +37,17 @@
     }
  }
  
+ @mixin xxl {
+    @media (min-width: #{$screen-xxl-min}) {
+        @content;
+    }
+ }
+
+ @mixin xxxl {
+    @media (min-width: #{$screen-xxxl-min}) {
+        @content;
+    }
+ }
 // Custom devices + Mui
 @mixin rwd($screen-min,$screen-max) {
     @media (min-width: $screen-min+'px')and (max-width:$screen-max+'px') {

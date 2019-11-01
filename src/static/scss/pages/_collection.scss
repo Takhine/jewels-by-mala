@@ -65,7 +65,10 @@
             justify-content: center;
             align-items: center;
             h2{
-                font-size: $xxlarge-font;
+                font-size: $xlarge-font;
+                @include xl{
+                    font-size: $xxlarge-font;
+                }
                 font-weight: 200;
                 line-height: .8;
                 font-family: $baskerville-thin;

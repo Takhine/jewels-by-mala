@@ -196,8 +196,8 @@ function LeftNavButton(props) {
     const { className, style, onClick } = props
     return (
         <div
-            className="slick-arrow left-arrow"
-            style={{ ...style, display: 'none' }}
+            className="slick-arrow slick-left-arrow"
+            style={{ ...style, display: 'flex' }}
             onClick={onClick}
         >
             Prev
@@ -315,27 +315,27 @@ const Diamonds = () => {
                 {diamondsList.map((diamond) => {
                     return (
                         <div key={diamond.title}>
-                            <div className="large-slider-container" style={{height:height}}>
-                            <img className="banner" src={diamond.img} alt={diamond.title} width={width} height={height} />
+                            <div className="large-slider-container">
+                            <img className="banner" src={diamond.img} alt={diamond.title} width={width} />
                             <div className={`${diamond.styles}`}>
                                 <h2>{diamond.title}</h2>
-                                <div className="side-content">
+                                {/* <div className="side-content">
                                     <h3>{diamond.subtitle}</h3>
                                     <div>{diamond.description}</div>
-                                </div>
+                                </div> */}
                             </div>
-                            <div className="quote-container mobile-version">
+                            {/* <div className="quote-container mobile-version">
                                 <div className="quote">
                                     <h3>{diamond.sellerDesc}</h3>
                                 </div>
-                            </div>
+                            </div> */}
                             </div>
                             
-                            <div className="quote-container desktop-version">
+                            {/* <div className="quote-container desktop-version">
                                 <div className="quote">
                                     <h3>{diamond.sellerDesc}</h3>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                     )

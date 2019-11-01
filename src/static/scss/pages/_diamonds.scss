@@ -24,7 +24,7 @@
             @include rwd(300,599){
                 margin-bottom: 0;
             }
-            @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
+            @media (min-width:300px) and (max-width:1600px){
                 height: 100% !important;
                 }    
             .slick-list{
@@ -141,10 +141,34 @@
                 }
             }
         }
+        .slick-left-arrow{
+            background-color: $primary-brown;
+            width: 40px;
+            height: 40px;
+            text-transform: uppercase;
+            position:fixed;
+            z-index: 3;
+            top: 50%;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            letter-spacing: 2px;
+            font-size: $xxxsmall-font;
+            cursor: pointer;
+            @include msm{
+                font-size: $xxsmall-font;
+                width: 60px;
+                height: 60px;
+            }
+            @include xl{
+                left: 70px;
+            }
+        }
         .slick-right-arrow{
             background-color: $primary-brown;
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             text-transform: uppercase;
             position:fixed;
             z-index: 3;
@@ -154,15 +178,20 @@
             align-items: center;
             color: white;
             letter-spacing: 2px;
-            font-size: x-small;
+            font-size: $xxxsmall-font;
             cursor: pointer;
+            @include msm{
+                width: 60px;
+                height: 60px; 
+                font-size: $xxsmall-font;
+            }
         }
         
         .banner{
             @media (orientation:landscape) and (max-width: 767px) and (min-height:450px){
                 padding-top: 70px;
             }
-            @media (min-width:300px) and (max-width:599px) and (orientation:portrait){
+            @media (min-width:300px) and (max-width:1600px) and (orientation:portrait){
             height: 100%;
             }        
         }
@@ -204,9 +233,12 @@
             h2{
                 font-weight: 100;
                 font-style: italic;
-                font-size: 25px;
+                font-size: $large-font;
                 @include md{
-                    font-size: 35px;
+                    font-size: $xlarge-font;
+                }
+                @include xxl{
+                    font-size: 40px;
                 }
             }
             .side-content{
@@ -246,7 +278,7 @@
         .right{  
             @include msm{
                 right: 5%;
-                bottom: 10%;
+                bottom: 20%;
             }
         }
         .quote-container{

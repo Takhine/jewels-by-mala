@@ -12,7 +12,6 @@
         padding-left: 70px;
     }
     .contact-box{
-        position: absolute;
         left: 0;
         right: 0;
         padding: 40px 16px;
@@ -24,22 +23,31 @@
             }
         }
         @include msm{
-            padding: 40px 60px;
+            padding: 180px 60px;
         }
+        
         @include md{
-            padding: 40px 160px 40px;
+            padding: 240px 120px 140px;
             margin: auto;
-
         }
         @include xl{
-            padding: 40px 160px 40px 200px;
+            padding: 140px 160px 140px 200px;
             margin: auto;
+        }
+        @include xxxl{
+            padding-bottom: 340px;
+        }
+        @media (orientation:landscape) and (max-width:850px) and (max-height:600px) {
+            padding: 40px 120px 140px;            
         }
         .contact-grid{
             margin: 1px;
             .contact-field-container{
                 margin-bottom: 20px;
                 padding-right: 0;
+                @include xxxl{
+                    margin-bottom: 80px;
+                }
                 .MuiTextField-root{
                     width: 100%;
                     text-transform: uppercase;

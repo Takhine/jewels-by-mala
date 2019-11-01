@@ -24,19 +24,16 @@
                 font-size: $regular-font;
             }
             @include mmd{
-                font-size: $xlarge-font;
+                font-size: $large-font;
             }
             .quote{
                 font-family: $baskerville-thin;
                 h2{
                     font-weight: 200;
                     letter-spacing: 1px;
-                    font-size: 14px;
-                    @include msm{
-                        font-size: 25px;
-                    }
+                    font-size: $small-font;
                     @include md{
-                        font-size: 35px;
+                        font-size: $large-font;
                     }
                 }
                 &:first-child{
@@ -65,11 +62,8 @@
                     font-weight: 200;
                     letter-spacing: 1px;
                     font-size: $small-font;
-                    @include msm{
-                        font-size: $large-font;
-                    }
                     @include md{
-                        font-size: $xlarge-font;
+                        font-size: $large-font;
                     }
                 }
             }

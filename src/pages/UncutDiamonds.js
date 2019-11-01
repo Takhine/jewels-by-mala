@@ -16,8 +16,8 @@ function LeftNavButton(props) {
     const { className, style, onClick } = props
     return (
         <div
-            className="slick-arrow left-arrow"
-            style={{ ...style, display: 'none' }}
+            className="slick-arrow slick-left-arrow"
+            style={{ ...style, display: 'flex' }}
             onClick={onClick}
         >
             Prev
@@ -28,7 +28,7 @@ function RightNavButton(props) {
     const { className, style, onClick } = props
     return (
         <div
-            className="slick-arrow right-arrow"
+            className="slick-arrow slick-right-arrow"
             style={{ ...style, display: 'flex' }}
             onClick={onClick}
         >
@@ -54,35 +54,23 @@ const UncutDiamonds = () => {
         <div className="uncut-diamonds">
             <Slider {...settings}>
             <div className="slider-container">
-                    <img className="banner" src={necklaces} alt="Jewels by Mala" width={width} height={height} />
+                    <img className="banner" src={necklaces} alt="Jewels by Mala" width={width} />
                     <div className="banner-content right-necklace">
                         <h2>Necklaces</h2>
-                        <div className="side-content">
-                            <h3>Black Label Masterpiece IX, 2016</h3>
-                            <p>Pear-shaped diamonds 12.06 cts, owl-shaped diamonds 93.04 cts <br/> round brilliant-cut diamonds 6.3 cts, diamonds 129.26 cts <br/> 24.7 x 18 x 10 cm</p>
-                        </div>
 
                     </div>
                 </div>
                 <div className="slider-container">
-                    <img className="banner" src={bangles} alt="Jewels by Mala" width={width} height={height} />
+                    <img className="banner" src={bangles} alt="Jewels by Mala" width={width} />
                     <div className="banner-content">
                         <h2>Bangles</h2>
-                        <div className="side-content">
-                            <h3>Ribbon Bangle &amp; Castle Bangle</h3>
-                            <p>Asscher-cut diamonds 5.27 cts, <br /> diamonds 35.58 cts</p>
-                        </div>
 
                     </div>
                 </div>
                 <div className="slider-container">
-                    <img className="banner" src={earings} alt="Jewels by Mala" width={width} height={height} />
+                    <img className="banner" src={earings} alt="Jewels by Mala" width={width} />
                     <div className="banner-content left">
                         <h2>Earings</h2>
-                        <div className="side-content">
-                            <h3>Floral Petals Earrings</h3>
-                            <p>Four Seasons Collection, <br /> Fancy-cut diamonds 14.21 cts, diamonds 53.28 cts</p>
-                        </div>
 
                     </div>
                 </div>

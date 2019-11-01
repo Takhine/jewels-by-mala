@@ -45,7 +45,7 @@ const Contact = () => {
         setValues({ ...value, [name]: e.target.value });
     };
     return (
-        <div className="contact" style={{width:width}}>
+        <div className="contact">
             <div className="contact-box">
                 <h2>Contact us</h2>
                 <Grid className="contact-grid" container spacing={2}>
