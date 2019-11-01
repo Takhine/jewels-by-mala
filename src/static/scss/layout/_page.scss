@@ -27,7 +27,7 @@ $gold_color: #8d7249;
   color: $page_font_color;
   overflow: visible;
   text-align: center;
-  width: calc(100% - side_nav_desk_width);
+  width: calc(100% - #{$side_nav_desk_width});
   @include page-transitions;
 }
 

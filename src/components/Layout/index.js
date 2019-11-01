@@ -14,12 +14,16 @@ import mainBackground from '../../static/images/backgrounds/main-background.png'
 import mainTitle from '../../static/images/main-title.png';
 import mainLogo from '../../static/images/main-logo.png';
 import navLogo from '../../static/images/nav-logo.png';
+import mobileLogo from '../../static/images/mobile-brown-title.png';
+import desktopLogo from '../../static/images/brown-title.png';
+
 
 import pinterest from '../../static/images/icons/pinterest-icon-main.png';
 import facebook from '../../static/images/icons/facebook-icon-main.png';
 import instagram from '../../static/images/icons/instagram-icon-main.png';
 import twitter from '../../static/images/icons/twitter-icon-main.png';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Layout(props) {
     const { height, width } = useWindowDimensions();
@@ -28,6 +32,8 @@ function Layout(props) {
     const [stateFooter, setFooterIn] = React.useState(true);
 
     const [sidebarName, setSidebar] = React.useState('');
+    const [sidebarLogo, setSidebarLogo] = React.useState('false');
+
 
 
     React.useEffect(() => {
@@ -37,29 +43,34 @@ function Layout(props) {
             setStateIn(true);
         } else {
             setStateIn(false);
-            if(props.history.location.pathname ==='/uncut-diamonds')
-            {
+            if (props.history.location.pathname === '/uncut-diamonds') {
                 setSidebar('uncut diamonds');
+                setSidebarLogo(false);
             }
-            else{
+            else if (props.history.location.pathname === '/artist') {
+                setSidebarLogo(true);
+                setSidebar('');
+            }
+            else {
                 setSidebar(props.history.location.pathname.split('/').slice(-1)[0]);
+                setSidebarLogo(false);
             }
 
         }
-        switch (props.history.location.pathname) {
-            case '/artist':
-                setFooterIn(true);
-                break;
-            case '/collection':
-                setFooterIn(true);
-                break;
-            case '/diamonds':
-                setFooterIn(true);
-                break;
-            default:
-                setFooterIn(false);
-                break;
-        }
+        // switch (props.history.location.pathname) {
+        //     case '/artist':
+        //         setFooterIn(true);
+        //         break;
+        //     case '/collection':
+        //         setFooterIn(true);
+        //         break;
+        //     case '/diamonds':
+        //         setFooterIn(true);
+        //         break;
+        //     default:
+        //         setFooterIn(true);
+        //         break;
+        // }
     }, [props.history.location.key])
 
     const openNav = () => {
@@ -70,7 +81,7 @@ function Layout(props) {
 
     const closeNav = (page) => {
         setStateIn(false);
-
+        setFooterIn(true);
         props.history.push(`/${page}`)
 
     }
@@ -81,14 +92,17 @@ function Layout(props) {
             {/* Navigation Panel */}
             <div id="navigation-menu" className={stateIn ? 'pageOpen' : 'pageClose'}>
                 <div className="overlay">
-                    <div className="menu-opened" style={{ width: width, height:height }}>
+                    <div className="menu-opened" style={{ width: width, height: height }}>
                         <div className="main-title">
-                            <img src={mainTitle} alt="Jewels By Mala" />
+                            <LazyLoadImage
+                                src={mainTitle}
+                                alt="Jewels By Mala"
+                            />
                         </div>
                         <div className="menu-items">
                             <List>
                                 <ListItem onClick={() => closeNav('about')}>
-                                    <img src={mainLogo} className="logo-container" alt="Jewels by Mala" width={50}/>
+                                    <img src={mainLogo} className="logo-container" alt="Jewels by Mala" width={50} />
                                 </ListItem>
                                 <ListItem onClick={() => closeNav('about')}>About</ListItem>
                                 <ListItem onClick={() => closeNav('artist')}>Artist</ListItem>
@@ -98,25 +112,48 @@ function Layout(props) {
                                 <ListItem>
                                     <div className="social-container">
                                         <a>
-                                        <img src={pinterest} alt="Pinterest" width={14} />
+                                            <LazyLoadImage
+                                                src={pinterest}
+                                                alt="Pinterest"
+                                                width={14}
+                                            />
                                         </a>
                                         <a>
-                                        <img src={facebook} alt="Facebook" width={14}/>
+                                            <LazyLoadImage
+                                                src={facebook}
+                                                alt="Facebook"
+                                                width={14}
+                                            />
                                         </a>
                                         <a>
-                                        <img src={instagram} alt="Instagram" width={14}/>
+                                            
+                                            <LazyLoadImage
+                                                src={instagram}
+                                                alt="Instagram"
+                                                width={14}
+                                            />
                                         </a>
                                         <a>
-                                        <img src={twitter} alt="Twitter" width={14}/>
+                                            
+                                            <LazyLoadImage
+                                                src={twitter}
+                                                alt="Twitter"
+                                                width={14}
+                                            />
                                         </a>
                                     </div>
                                 </ListItem>
                             </List>
                         </div>
-                        <div className="main-copyright" style={{width:width, height:height}}>
+                        <div className="main-copyright" style={{ width: width, height: height }}>
                             <p>Copyright &copy;JEWELS BY MALA 2019 &nbsp; | &nbsp; Created By Pinxitblue &nbsp;|&nbsp; Privacy policy Term of use Credits</p>
                         </div>
-                        <img id="background" src={mainBackground} width={width} />
+
+                        <LazyLoadImage
+                            id="background"
+                            src={mainBackground}
+                            width={width}
+                        />
                     </div>
 
                 </div>
@@ -126,10 +163,19 @@ function Layout(props) {
             <div id="sidebar" className={stateIn ? 'sidebarOpen' : 'sidebarClosed'} onClick={() => openNav()}>
                 <Button id="side-menu-icon">&nbsp;</Button>
                 <div className="sidebar-logo-container">
-                <img src={navLogo} alt="Jewels by Mala"/>
 
+                    <LazyLoadImage
+                        src={navLogo}
+                        alt="Jewels by Mala"
+                    />
                 </div>
-                <p className="sidebar-title">{sidebarName}</p>
+                {}
+                <p className="sidebar-title desktop">{sidebarName}</p>
+                {sidebarLogo &&
+                    <img className="sidebar-logo-desktop desktop" src={desktopLogo} alt="Jewels by Mala" width="15" />
+                }
+                <img className="sidebar-logo mobile" src={mobileLogo} alt="Jewels by Mala" />
+
             </div>
 
 

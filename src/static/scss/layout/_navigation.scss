@@ -44,6 +44,31 @@
       display: block;
     }
   }
+  .sidebar-logo{
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+  .sidebar-logo-desktop{
+    @extend .sidebar-logo;
+    width: 15px;
+  }
+  .desktop{
+    display: none;
+    @include xl{
+      display: block;
+    }
+  }
+  .mobile{
+    display: block;
+    @include xl{
+      display: none;
+    }
+  }
 }
 #navigation-menu {
   background-color: black;
@@ -195,14 +220,20 @@
     margin-bottom: 20px;
   }
   .social-container{
-    width: 90px;
+    width: 135px;
+    @include xl{
+      width: 90px;
+    }
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     a{
       cursor: pointer;
       img{
-        width: 16px;
+        width: 25px;
+        @include xl{
+          width: 16px;
+        }
       }
     }
   }

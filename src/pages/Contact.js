@@ -9,6 +9,7 @@ import {
     FormControl,
     Button
 } from '@material-ui/core';
+import useWindowDimensions from '../components/windowDimension';
 
 const countries = [
     {
@@ -29,6 +30,8 @@ const countries = [
     },
 ];
 const Contact = () => {
+    const { height, width } = useWindowDimensions();
+
     const [value, setValues] = React.useState({
         country: 'INR'
     });

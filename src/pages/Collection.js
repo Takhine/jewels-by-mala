@@ -11,6 +11,7 @@ import {NavLink} from 'react-router-dom';
                         <h2 className="diamond-title">Diamonds</h2>
                         <NavLink exact to="/diamonds">
                         <p className="collection-link">View Collection</p>
+                        <hr/>
                         </NavLink>
                     </div> 
                 </Grid>
@@ -21,6 +22,7 @@ import {NavLink} from 'react-router-dom';
                         <h2 className="diamond-title">Diamonds</h2>
                         <NavLink exact to="/uncut-diamonds">
                         <p className="collection-link">View Collection</p>
+                        <hr/>
                         </NavLink>
                         </div>
                     </div> 

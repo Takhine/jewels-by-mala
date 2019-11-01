@@ -5,26 +5,38 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import useWindowDimensions from '../components/windowDimension';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 // Images
 import leftArrow from '../static/images/icons/left-arrow.png';
 import rightArrow from '../static/images/icons/right-arrow.png';
 
-
-
-import necklace from 'static/images/backgrounds/diamond-necklaces-background.png';
-import necklace1 from 'static/images/diamond/d-necklace-1.png';
-import necklace2 from 'static/images/diamond/d-necklace-2.png';
-import necklace3 from 'static/images/diamond/d-necklace-3.png';
+import necklace from 'static/images/backgrounds/diamond-necklaces-background.jpg';
+import necklace1 from 'static/images/diamond/d-necklace-1.jpg';
+import necklace2 from 'static/images/diamond/d-necklace-2.jpg';
+import necklace3 from 'static/images/diamond/d-necklace-3.jpg';
 
 
 
 import earings from 'static/images/backgrounds/diamond-earings-background.jpg';
-import earings1 from 'static/images/diamond/d-earings-1.png';
-import earings2 from 'static/images/diamond/d-earings-2.png';
-import earings3 from 'static/images/diamond/d-earings-3.png';
+import earings1 from 'static/images/diamond/d-earring-1.jpg';
+import earings2 from 'static/images/diamond/d-earring-2.jpg';
+import earings3 from 'static/images/diamond/d-earring-3.jpg';
 
+import rings from 'static/images/backgrounds/diamond-rings-background.jpg';
+import rings1 from 'static/images/diamond/d-ring-1.jpg';
+import rings2 from 'static/images/diamond/d-ring-2.jpg';
+import rings3 from 'static/images/diamond/d-ring-3.jpg';
 
+import bracelet from 'static/images/backgrounds/diamond-bracelets-background.jpg';
+import bracelet1 from 'static/images/diamond/d-bracelet-1.jpg';
+import bracelet2 from 'static/images/diamond/d-bracelet-2.jpg';
+import bracelet3 from 'static/images/diamond/d-bracelet-3.jpg';
 
+import pendants from 'static/images/backgrounds/diamond-pendants-background.jpg';
+import pendants1 from 'static/images/diamond/d-pendant-1.jpg';
+import pendants2 from 'static/images/diamond/d-pendant-2.jpg';
+import pendants3 from 'static/images/diamond/d-pendant-3.jpg';
 
 const diamondsList = [
     {
@@ -33,7 +45,7 @@ const diamondsList = [
         "subtitle": "Black Label Masterpiece IX, 2016",
         "description": <p>Pear-shaped diamonds 12.06 cts, owl-shaped diamonds 93.04 cts <br /> round brilliant-cut diamonds 6.3 cts, diamonds 129.26 cts <br /> 24.7 x 18 x 10 cm</p>,
         "styles": "banner-content right",
-        "sellerDesc": "Understatedly elegant...",
+        "sellerDesc": "We pride ourselves on creating elegant jewelry for the accomplished woman, whose sophisticated brilliance is only enhanced by that of her diamond. Each necklace begins with a moment of inspiration, transforming our diamonds into covetable designs. ",
         "carousel":[
             {
                 "img":necklace1,
@@ -64,7 +76,7 @@ const diamondsList = [
         "subtitle": "Floral Petals Earings",
         "description": <p>FOUR SEASONS COLLECTION <br /> fancy-cut diamonds 14.21 cts, diamonds 53.28 cts</p>,
         "styles": "banner-content left",
-        "sellerDesc": "Understatedly more elegant",
+        "sellerDesc": "Understatedly elegant diamond stud earrings to intricately designed bespoke creations, the selection of earrings at Mala's ranges from classic and feminine, to cool and contemporary. Set with a cut-down finish, these spectacular earrings are a symbol of your unending bond.",
         "carousel":[
             {
                 "img":earings1,
@@ -87,6 +99,96 @@ const diamondsList = [
                 "imgDesc":'29.22 CTS',
             },
         ],
+    },
+    {
+        "title": "Rings",
+        "img": rings,
+        "subtitle": "Foliage Ring",
+        "description": <p>Square-cut diamond - 2.23 cts <br /> fancy coloured diamonds 1.95 cts, <br/> diamonds 11.06 cts</p>,
+        "styles": "banner-content right",
+        "sellerDesc": "Sophisticated diamond rings to strikingly colourful cocktail rings, each design is meticulously crafted using beautiful gemstones and exquisite details in yellow gold or white metal. Celebrate the most inspiring stories of love, life and success.",
+        "carousel":[
+            {
+                "img":rings1,
+                "imgTitle":'Diamond Rings',
+                "imgDesc":'29.20 CTS',
+            },
+            {
+                "img":rings2,
+                "imgTitle":'Diamond Rings 2',
+                "imgDesc":'29.21 CTS',
+            },
+            {
+                "img":rings3,
+                "imgTitle":'Diamond Rings 3',
+                "imgDesc":'29.22 CTS',
+            },
+            {
+                "img":rings3,
+                "imgTitle":'Diamond Rings 4',
+                "imgDesc":'29.22 CTS',
+            },
+        ],
+    },
+    {
+        "title": "Bangles & Bracelet",
+        "img": bracelet,
+        "subtitle": "Ribbon Bangle & Castle Bangle",
+        "description": <p>Asscher-cut diamonds - 5.27 cts <br /> diamonds 35.58 cts</p>,
+        "styles": "banner-content right",
+        "sellerDesc": "Fluid diamond line bracelets to rigid sculptural cuffs, bracelet are designed to be a perfect statement of character and flair. Always lovely and sophisticated, they are a product of the perfect balance between design and charm.",
+        "carousel":[
+            {
+                "img":bracelet1,
+                "imgTitle":'Diamond Bracelet',
+                "imgDesc":'29.20 CTS',
+            },
+            {
+                "img":bracelet2,
+                "imgTitle":'Diamond Bracelet 2',
+                "imgDesc":'29.21 CTS',
+            },
+            {
+                "img":bracelet3,
+                "imgTitle":'Diamond Bracelet 3',
+                "imgDesc":'29.22 CTS',
+            },
+            {
+                "img":bracelet3,
+                "imgTitle":'Diamond Bracelet 4',
+                "imgDesc":'29.22 CTS',
+            },
+        ],
+    },
+    {
+        "title": "Pendants",
+        "img": pendants,
+        "subtitle": "Ribbon Bangle",
+        "description": <p>Asscher-cut diamonds - 5.27 cts <br /> diamonds 35.58 cts</p>,
+        "styles": "banner-content left",
+        "sellerDesc": "Classic diamond necklaces, colourful gemstone necklaces and layered, long-length diamond set chains; all reveal the same attention to detail and exceptional craftsmanship.",
+        "carousel":[
+            {
+                "img":pendants1,
+                "imgTitle":'Diamond Pendant',
+                "imgDesc":'29.20 CTS',
+            },
+            {
+                "img":pendants2,
+                "imgTitle":'Diamond Pendant 2',
+                "imgDesc":'29.21 CTS',
+            },
+            {
+                "img":pendants3,
+                "imgTitle":'Diamond Pendant 3',
+                "imgDesc":'29.22 CTS',
+            },
+            {
+                "img":pendants3,
+                "imgTitle":'Diamond Pendant 4',
+                "imgDesc":'29.22 CTS',
+            },
+        ],
     }
 ]
 
@@ -94,8 +196,8 @@ function LeftNavButton(props) {
     const { className, style, onClick } = props
     return (
         <div
-            className="slick-arrow left-arrow"
-            style={{ ...style, display: 'none' }}
+            className="slick-arrow slick-left-arrow"
+            style={{ ...style, display: 'flex' }}
             onClick={onClick}
         >
             Prev
@@ -122,7 +224,10 @@ function LeftCarousel(props) {
             style={{ ...style, display:'block'}}
             onClick={onClick}
         >
-            <img src={leftArrow} alt="arrow_left" />
+            <LazyLoadImage
+                src={leftArrow}
+                alt="arrow_left"
+            />
         </div>
     );
 }
@@ -134,7 +239,10 @@ function RightCarousel(props) {
             style={{ ...style, display: 'block' }}
             onClick={onClick}
         >
-            <img src={rightArrow} alt="arrow_right" />
+            <LazyLoadImage
+                src={rightArrow}
+                alt="arrow_right"
+            />
         </div>
     );
 }
@@ -209,26 +317,42 @@ const Diamonds = () => {
 
     return (
         <div className="diamonds">
-            <Slider {...settings}>
+            <Slider className="slick-slider-mobile" {...settings}>
                 {diamondsList.map((diamond) => {
                     return (
                         <div key={diamond.title}>
+<<<<<<< HEAD
+                            <div className="large-slider-container">
+                            <img className="banner" src={diamond.img} alt={diamond.title} width={width} />
+=======
                             <div className="large-slider-container" style={{height:height}}>
-                            <img className="banner" src={diamond.img} alt={diamond.title} width={width} height={height} />
+                            <LazyLoadImage
+                                className="banner"
+                                src={diamond.img}
+                                alt={diamond.title}
+                                width={width}
+                                height={height}
+                            />
+>>>>>>> 2a2de1e1fa6aa287e8c091903a3a52845d75828e
                             <div className={`${diamond.styles}`}>
                                 <h2>{diamond.title}</h2>
-                                <div className="side-content">
+                                {/* <div className="side-content">
                                     <h3>{diamond.subtitle}</h3>
                                     <div>{diamond.description}</div>
-                                </div>
+                                </div> */}
                             </div>
-                            </div>
-                            
-                            <div className="quote-container">
+                            {/* <div className="quote-container mobile-version">
                                 <div className="quote">
                                     <h3>{diamond.sellerDesc}</h3>
                                 </div>
+                            </div> */}
                             </div>
+                            
+                            {/* <div className="quote-container desktop-version">
+                                <div className="quote">
+                                    <h3>{diamond.sellerDesc}</h3>
+                                </div>
+                            </div> */}
                         </div>
 
                     )
@@ -242,7 +366,10 @@ const Diamonds = () => {
                     {diamondsList[slide].carousel.map((item)=>{
                         return(
                             <div key={item.imgTitle} className="small-slider">
-                                <img src={item.img} alt={item.imgTitle}/>
+                                <LazyLoadImage
+                                    src={item.img}
+                                    alt={item.imgTitle}
+                                />
                                 <div className="small-slider-content">
                                     <h2>{item.imgTitle}</h2>
                                     <p>{item.imgDesc}</p>

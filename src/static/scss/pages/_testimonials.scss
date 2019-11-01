@@ -1,9 +1,17 @@
 .testimonial{
     padding-top: 70px;
     width: 100vw;
+    padding-bottom: 140px;
     @include xl{
         padding-top: 0;
-        padding-bottom: 0;
+        padding-bottom: 280px;
+    }
+    @include xxl{
+        padding-bottom: 340px;
+    }
+    @media (max-width: 768px) and (min-height: 1024px){
+    padding-bottom: 340px;
+
     }
     .testimonial-banner{
         .banner{
@@ -11,9 +19,15 @@
         }
     }
     .testimonial-content{
+        padding-bottom: 40px;
+        font-size: $small-font;
         @include xl{
         padding-left: 70px;
         padding: 20px;
+        padding-top: 40px;
+        }
+        @include xxl{
+            padding-top: 140px;
         }
         .slider-container{
             text-align: center;
@@ -23,6 +37,9 @@
                 font-family:    $baskerville-thin ;
                 @include xl{
                     font-size: $large-font;
+                }
+                @include xxl{
+                    font-size: $xlarge-font;
                 }
                 .person{
                     margin-top: 40px;
